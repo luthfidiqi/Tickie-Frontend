@@ -26,7 +26,7 @@ function MovieDetails() {
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="../home"
           ><img src={logoTickitz} alt=""
         /></a>
         <button
@@ -43,12 +43,12 @@ function MovieDetails() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+              <a class="nav-link active" aria-current="page" href="../home"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="/"
                 >List Movie</a
               >
             </li>
@@ -132,10 +132,10 @@ function MovieDetails() {
                 <img src={arrow} alt="" />
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="/">Action</a></li>
+                <li><a class="dropdown-item" href="/">Another action</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="/">Something else here</a>
                 </li>
               </ul>
             </div>
@@ -154,10 +154,10 @@ function MovieDetails() {
                 <img src={arrow} alt="" />
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="/">Action</a></li>
+                <li><a class="dropdown-item" href="/">Another action</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="/">Something else here</a>
                 </li>
               </ul>
             </div>
@@ -196,7 +196,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -231,7 +231,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -266,7 +266,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -304,7 +304,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -339,7 +339,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -374,7 +374,7 @@ function MovieDetails() {
                 <a
                   class="d-flex btn-book btn btn-primary"
                   aria-current="page"
-                  href="order.html"
+                  href="../order"
                 >
                   Book now
                 </a>
@@ -384,7 +384,7 @@ function MovieDetails() {
         </div>
         <div class="view-more d-flex container">
           <div class="view-line"></div>
-          <a href="#">view more</a>
+          <a href="/">view more</a>
           <div class="view-line"></div>
         </div>
       </section>
@@ -402,8 +402,8 @@ function MovieDetails() {
         <div class="explore">
           <h3>Explore</h3>
           <div class="explore-link">
-            <a href="#">Home</a>
-            <a href="#">List Movie</a>
+            <a href="/">Home</a>
+            <a href="/">List Movie</a>
           </div>
         </div>
         <div class="sponsor">
@@ -419,32 +419,32 @@ function MovieDetails() {
           <div class="follow-content">
             <div class="follow-list d-flex align-items-center">
               <img src={facebook} alt="" />
-              <a target="_blank" href="#"> Tickitz Cinema id </a>
+              <a target="_blank" href="/"> Tickitz Cinema id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={instagram} alt="" />
-              <a target="_blank" href="#"> tickitz.id </a>
+              <a target="_blank" href="/"> tickitz.id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={twitter} alt="" />
-              <a target="_blank" href="#"> tickitz.id </a>
+              <a target="_blank" href="/"> tickitz.id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={youtube} alt="" />
-              <a target="_blank" href="#"> Tickitz Cinema id </a>
+              <a target="_blank" href="/"> Tickitz Cinema id </a>
             </div>
           </div>
           <div class="follow-content-mobile">
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/facebook.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/instagram.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/twitter.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/youtube.svg" alt="" />
             </a>
           </div>

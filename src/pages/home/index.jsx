@@ -22,7 +22,7 @@ function Home() {
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="../"
+        <a class="navbar-brand" href="/"
           ><img src={logoTickitz} alt=""
         /></a>
         <button
@@ -39,10 +39,10 @@ function Home() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../">Home</a>
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../"
+              <a class="nav-link active" aria-current="page" href="/"
                 >List Movie</a
               >
             </li>
@@ -50,7 +50,7 @@ function Home() {
           <a
             class="d-flex btn-sign-up btn btn-primary"
             aria-current="page"
-            href="sign-in.html"
+            href="../signIn"
           >
             Sign Up
           </a>
@@ -84,7 +84,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -98,7 +98,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -112,7 +112,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -126,7 +126,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -140,7 +140,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -154,7 +154,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -243,7 +243,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -257,7 +257,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -271,7 +271,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -285,7 +285,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -299,7 +299,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>
@@ -313,7 +313,7 @@ function Home() {
               <a
                 class="d-flex btn-showing btn btn-outline-primary"
                 aria-current="page"
-                href="movie-details.html"
+                href="../movieDetails"
               >
                 Details
               </a>

@@ -1,12 +1,14 @@
 // import React, { useState } from "react";
 // import "./index.css";
 // import styles from "./React.module.css";
+// import Navbar from "../../../components/basic/Navbar";
+// import Card from "../../../components/basic/Card";
 
 // function BasicReact() {
 //   const data = [
 //     { id: 1, name: "Spiderman" },
 //     { id: 2, name: "Batman" },
-//     { id: 3, name: "Lego" },
+//     { id: 3, name: "Lego" }
 //   ];
 //   const [email, setEmail] = useState("");
 //   const [keyword, setKeyword] = useState("");
@@ -38,10 +40,19 @@
 //       console.log("Keyword : ", event.target.value);
 //     }
 //   };
+//   const handleDetailMovie = (id, data) => {
+//     console.log("Detail Clicked", id);
+//     console.log(data);
+//   };
 
 //   return (
-//     <>
+//     <div className="text-center">
 //       <h1>Basic React Page</h1>
+//       <hr />
+//       <h3>Component</h3>
+//       <Navbar />
+//       <hr />
+//       <Card name="Spiderman" category="Action" handleDetail={handleDetailMovie} />
 //       <hr />
 //       <h3>Mapping</h3>
 //       {/* {data.map(() => ())} */}
@@ -101,12 +112,11 @@
 //       {/* global */}
 //       <h1 className="heading">Hello World</h1>
 //       {/* react module */}
-//       <h1 className={`${styles.heading} ${styles.textUnderline} text-center`}>
-//         Hello World
-//       </h1>
+//       <h1 className={`${styles.heading} ${styles.textUnderline} text-center`}>Hello World</h1>
 //       <h1 className={(styles.heading, styles.textUnderline)}>Hello World</h1>
 //       <h1 className={styles.heading2}>Hello World</h1>
-//     </>
+//       <hr />
+//     </div>
 //   );
 // }
 

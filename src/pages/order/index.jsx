@@ -20,7 +20,7 @@ function Order() {
     <div class="order">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/"
           ><img src={logoTickitz} alt=""
         /></a>
         <button
@@ -37,12 +37,12 @@ function Order() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html"
+              <a class="nav-link active" aria-current="page" href="../home"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a class="nav-link active" aria-current="page" href="/"
                 >List Movie</a
               >
             </li>
@@ -89,14 +89,14 @@ function Order() {
             <a
               class="d-flex btn-payment btn btn-outline-primary disable-mobile"
               aria-current="page"
-              href="movie-details.html"
+              href="../movieDetails"
             >
               Change your movie
             </a>
             <a
               class="d-flex btn-payment-active btn btn-outline-primary"
               aria-current="page"
-              href="payment.html"
+              href="../payment"
             >
               Checkout now
             </a>
@@ -151,8 +151,8 @@ function Order() {
         <div class="explore">
           <h3>Explore</h3>
           <div class="explore-link">
-            <a href="#">Home</a>
-            <a href="#">List Movie</a>
+            <a href="/">Home</a>
+            <a href="/">List Movie</a>
           </div>
         </div>
         <div class="sponsor">
@@ -168,32 +168,32 @@ function Order() {
           <div class="follow-content">
             <div class="follow-list d-flex align-items-center">
               <img src={facebook} alt="" />
-              <a target="_blank" href="#"> Tickitz Cinema id </a>
+              <a target="_blank" href="/"> Tickitz Cinema id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={instagram} alt="" />
-              <a target="_blank" href="#"> tickitz.id </a>
+              <a target="_blank" href="/"> tickitz.id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={twitter} alt="" />
-              <a target="_blank" href="#"> tickitz.id </a>
+              <a target="_blank" href="/"> tickitz.id </a>
             </div>
             <div class="follow-list d-flex align-items-center">
               <img src={youtube} alt="" />
-              <a target="_blank" href="#"> Tickitz Cinema id </a>
+              <a target="_blank" href="/"> Tickitz Cinema id </a>
             </div>
           </div>
           <div class="follow-content-mobile">
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/facebook.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/instagram.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/twitter.svg" alt="" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="/">
               <img src="/assets/img/home/youtube.svg" alt="" />
             </a>
           </div>

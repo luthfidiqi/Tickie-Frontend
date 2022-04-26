@@ -52,7 +52,7 @@ function SignIn() {
               />
             </div>
             <a
-              href="home.html"
+              href="../home"
               type="submit"
               class="signIn_btn btn btn-primary"
             >

@@ -5,7 +5,7 @@ import SignIn from "./pages/signIn";
 import Home from "./pages/home";
 import MovieDetails from "./pages/movieDetails";
 import Order from "./pages/order";
-// import Payment from "./pages/payment";
+import Payment from "./pages/payment";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="home" element={<Home />} />
         <Route path="movieDetails" element={<MovieDetails />} />
         <Route path="order" element={<Order />} />
-        {/* <Route path="payment" element={<Payment />} /> */}
+        <Route path="payment" element={<Payment />} />
       </Routes>
     </BrowserRouter>
   );
