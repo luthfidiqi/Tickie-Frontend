@@ -2,35 +2,6 @@
   background-color: #f5f6f8;
 }
 
-.navbar {
-  top: 0;
-  position: sticky;
-  background-color: white !important;
-  z-index: 1;
-  box-shadow: 0px 8px 24px rgba(186, 186, 186, 0.16);
-}
-
-.btn-sign-up {
-  background-color: #5f2eea;
-  font-size: 14px;
-  font-weight: 600;
-  width: 120px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-nav a {
-  font-size: 16px !important;
-  color: #414141 !important;
-  font-weight: 600;
-  margin: 0 16px;
-}
-
-.avatar {
-  margin-left: 48px;
-}
-
 .payment_main {
   padding-top: 56px;
   padding-bottom: 48px;
@@ -213,113 +184,6 @@
   color: #4e4b66;
 }
 
-/* FOOTER */
-footer {
-  background-color: white;
-}
-
-.footer-content {
-  width: 100%;
-  height: 100%;
-}
-
-.logo {
-  width: 30%;
-  padding-top: 95px;
-  padding-right: 89px;
-}
-
-.logo p {
-  margin-top: 15px;
-  color: #6e7191;
-  font-size: 16px;
-  line-height: 32px;
-}
-
-.explore {
-  width: 20%;
-  padding-top: 110px;
-}
-
-.explore h3 {
-  font-size: 16px;
-  color: #000000;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
-
-.explore a {
-  font-size: 14px;
-  color: #4e4b66;
-  text-decoration: none;
-}
-
-.explore-link {
-  display: flex;
-  flex-direction: column;
-}
-
-.explore-link a {
-  margin-bottom: 15px;
-}
-
-.sponsor {
-  width: 30%;
-  padding-top: 110px;
-}
-
-.sponsor img {
-  display: block;
-  margin-bottom: 23px;
-}
-
-.sponsor h3 {
-  font-size: 16px;
-  color: #000000;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
-
-.follow {
-  width: 20%;
-  padding-top: 110px;
-}
-
-.follow h3 {
-  font-size: 16px;
-  color: #000000;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
-
-.follow a {
-  color: #6e7191;
-  font-size: 14px;
-  text-decoration: none;
-  margin-left: 16px;
-}
-
-.follow-list {
-  margin-bottom: 24px;
-}
-
-.copyright {
-  text-align: center;
-  padding: 47px;
-  font-size: 14px;
-  color: #4e4b66;
-}
-
-/* .showing-list,
-  .upcoming-month {
-    overflow-x: auto;
-    padding-bottom: 70px;
-  } */
-
-.follow-content-mobile {
-  display: none;
-}
-
 @media (max-width: 575.98px) {
   main {
     flex-direction: column;
@@ -335,46 +199,5 @@ footer {
   }
   .btn-payment-active {
     width: 100%;
-  }
-  /* FOOTER */
-  .footer-content {
-    flex-direction: column;
-    padding-left: 24px;
-  }
-  .logo,
-  .explore,
-  .sponsor,
-  .follow {
-    width: 100%;
-    padding-top: 48px;
-    padding-right: 0;
-  }
-  .sponsor-logo {
-    display: flex;
-  }
-  .sponsor-logo img {
-    width: 30%;
-    margin-right: 24px;
-    margin-bottom: 0;
-  }
-  .explore-link {
-    display: flex;
-  }
-  .explore-link a {
-    margin-right: 61px;
-    margin-bottom: 0;
-  }
-  .follow-content {
-    display: none;
-  }
-  .follow-content-mobile {
-    display: flex;
-  }
-  .follow-content-mobile a {
-    margin-right: 32px;
-    margin-left: 0;
-  }
-  .follow {
-    margin-bottom: 17px;
   }
 }
