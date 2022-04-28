@@ -1,6 +1,9 @@
 import axios from "axios";
 
+// const baseURL1 = process.env.BASE_URL_1
+
 const axiosApiIntances = axios.create({
+  // baseURL: `${process.env.BASE_URL_1}`
   baseURL: "https://project-tickitz.herokuapp.com/"
   // baseURL: "https://project-tickie.herokuapp.com/"
   // baseURL: "http://localhost:3001/"

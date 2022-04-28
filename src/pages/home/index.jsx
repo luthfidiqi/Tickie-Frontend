@@ -28,17 +28,21 @@ function Home() {
     try {
       console.log("GET DATA MOVIE");
       // Input
-        console.log(limit);
-        console.log(page);
+        // console.log(limit);
+        // console.log(page);
       // Proses
       const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
-        console.log(resultMovie);
+        // console.log(resultMovie);
       // Output
       setData(resultMovie.data.data);
       setPageInfo(resultMovie.data.pagination);
     } catch (error) {
       console.log(error.response);
     }
+  };
+
+  const handleDetailMovie = (id) => {
+    console.log(id);
   };
 
 
@@ -68,7 +72,7 @@ function Home() {
           <div class="showing-list container d-flex">
             {data.map((item) => (
             <div key={item.id}>
-              <CardHome />
+              <CardHome data={item} handleDetail={handleDetailMovie} />
             </div>
             ))}
           </div>
