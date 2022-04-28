@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosApiIntances = axios.create({
-  // baseURL: "https://project-tickitz.herokuapp.com/"
-  baseURL: "https://project-tickie.herokuapp.com/"
+  baseURL: "https://project-tickitz.herokuapp.com/"
+  // baseURL: "https://project-tickie.herokuapp.com/"
   // baseURL: "http://localhost:3001/"
 });
 

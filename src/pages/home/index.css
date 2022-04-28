@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  border: none;
+}
+
 /* BANNER */
 .home_banner {
   margin-top: 48px;

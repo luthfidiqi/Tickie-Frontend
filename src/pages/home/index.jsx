@@ -1,20 +1,50 @@
 import "./index.css";
 import Footer from "../../components/footer";
 import NavbarSignUp from "../../components/NavbarSignUp";
+import { Link } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+import CardHome from "../../components/CardHome";
+import axios from "../../utils/axios";
+
 
 // Assets IMG
 import blackWidow from "../../assets/img/home/black-widow.png";
 import homeBanner from "../../assets/img/home/home-banner.png";
-import johnWick from "../../assets/img/home/john-wick.png";
-import lionKing from "../../assets/img/home/lion-king.png";
-import spiderMan from "../../assets/img/home/spider-man.png";
 import tenet from "../../assets/img/home/tenet.png";
 import theWitches from "../../assets/img/home/the-witches.png";
 
 function Home() {
+  const limit = 6;
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
+  const [pageInfo, setPageInfo] = useState({});
+
+  useEffect(() => {
+    getdataMovie();
+  }, []);
+
+  const getdataMovie = async () => {
+    try {
+      console.log("GET DATA MOVIE");
+      // Input
+        console.log(limit);
+        console.log(page);
+      // Proses
+      const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
+        console.log(resultMovie);
+      // Output
+      setData(resultMovie.data.data);
+      setPageInfo(resultMovie.data.pagination);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+
   return (
     <>
-      <NavbarSignUp></NavbarSignUp>
+      <NavbarSignUp />
 
       <header class="home_banner container d-flex">
         <div class="home_banner-content">
@@ -31,93 +61,16 @@ function Home() {
               <h2>Now Showing</h2>
               <div class="home_showing-line"></div>
             </div>
-            <a class="home_show-all" href="../">view all</a>
+            <Link to="../">
+            <a class="home_show-all" href="/">view all</a>
+            </Link>
           </div>
           <div class="showing-list container d-flex">
-            <div class="showing-card-active">
-              <img src={spiderMan} alt="" />
-              <div class="showing-card-content">
-                <h3>Spider-Man</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
+            {data.map((item) => (
+            <div key={item.id}>
+              <CardHome />
             </div>
-            <div class="showing-card-active">
-              <img src={lionKing} alt="" />
-              <div class="showing-card-content">
-                <h3>Lion King</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={johnWick} alt="" />
-              <div class="showing-card-content">
-                <h3>John Wick</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={spiderMan} alt="" />
-              <div class="showing-card-content">
-                <h3>Spider-Man</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={lionKing} alt="" />
-              <div class="showing-card-content">
-                <h3>Lion King</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={johnWick} alt="" />
-              <div class="showing-card-content">
-                <h3>John Wick</h3>
-                <p>Acion, Adventure, Sci-FI</p>
-                <a
-                  class="d-flex btn-showing btn btn-outline-primary"
-                  aria-current="page"
-                  href="../movieDetails"
-                >
-                  Details
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -125,7 +78,9 @@ function Home() {
         <section class="home_upcoming-movie">
           <div class="home_upcoming-title d-flex container">
             <h2>Upcoming Movies</h2>
-            <a class="show-all" href="../">view all</a>
+            <Link to="/">
+              <a class="show-all" href="/">view all</a>
+            </Link>
           </div>
           <div class="home_upcoming-month d-flex container">
             <a
@@ -198,13 +153,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>Black Widow</h3>
                 <p>Action, Adventure, Sci-Fi</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
             <div class="showing-card-active">
@@ -212,13 +169,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>The Witches</h3>
                 <p>Adventure, Comedy</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
             <div class="showing-card-active">
@@ -226,13 +185,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>Tenet</h3>
                 <p>Action, Sci-Fi</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
             <div class="showing-card-active">
@@ -240,13 +201,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>Black Widow</h3>
                 <p>Action, Adventure, Sci-Fi</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
             <div class="showing-card-active">
@@ -254,13 +217,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>The Witches</h3>
                 <p>Adventure, Comedy</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
             <div class="showing-card-active">
@@ -268,13 +233,15 @@ function Home() {
               <div class="showing-card-content">
                 <h3>Tenet</h3>
                 <p>Action, Sci-Fi</p>
+                <Link to="../movieDetails">
                 <a
                   class="d-flex btn-showing btn btn-outline-primary"
                   aria-current="page"
-                  href="../movieDetails"
+                  href="/"
                 >
                   Details
                 </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -306,7 +273,7 @@ function Home() {
         </section>
       </main>
 
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
