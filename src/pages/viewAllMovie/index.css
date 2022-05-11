@@ -1,0 +1,116 @@
+.viewAllMovie {
+  background-color: #f5f6f8;
+}
+
+.viewAllMovie_main {
+  padding-top: 56px;
+  padding-bottom: 48px;
+  width: 100%;
+}
+
+.allMovie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 45px 68px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.allMovie_title {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.allMovie_title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.allMovie_title .dropdown a {
+  background-color: white;
+  color: #4e4b66;
+  font-size: 16px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  font-family: "Mulish", sans-serif !important;
+}
+
+.allMovie_title .dropdown .dropdown-toggle {
+  border: 1px solid #dedede;
+}
+
+.allMovie_title input {
+  background-color: white;
+  padding: 12px 18px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.allMovie_title input::placeholder {
+  font-size: 16px !important;
+  color: #4e4b66 !important;
+  font-family: "Mulish", sans-serif !important;
+}
+
+.allMovie_list {
+  justify-content: space-between;
+}
+
+.allMovie_card {
+  margin-right: 0px;
+  box-shadow: 0px 8px 30px rgba(186, 186, 186, 0);
+  border: 1px solid #dedede;
+}
+
+/* PAGINATION */
+.allMovie_pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.allMovie_pagination ul .active .page-link {
+  border: none;
+  margin: 0 10px;
+  font-size: 18px !important;
+  background-color: #5f2eea;
+  padding: 8px 18px;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  box-shadow: 0px 8px 16px #602eea3d;
+}
+
+.allMovie_pagination ul li a {
+  margin: 0 10px;
+  font-size: 18px !important;
+  color: #4e4b66;
+  padding: 8px 16px;
+  border: 1px solid #dedede;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+}
+
+@media (max-width: 575.98px) {
+  main {
+    flex-direction: column;
+  }
+}

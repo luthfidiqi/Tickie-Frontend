@@ -1,9 +1,10 @@
 import axios from "axios";
 
 // const baseURL1 = process.env.BASE_URL_1
+// console.log(process.env.REACT_APP_URL);
 
 const axiosApiIntances = axios.create({
-  // baseURL: `${process.env.BASE_URL_1}`
+  // baseURL: process.env.REACT_APP_URL
   baseURL: "https://project-tickitz.herokuapp.com/"
   // baseURL: "https://project-tickie.herokuapp.com/"
   // baseURL: "http://localhost:3001/"

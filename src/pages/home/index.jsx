@@ -65,7 +65,7 @@ function Home() {
               <h2>Now Showing</h2>
               <div class="home_showing-line"></div>
             </div>
-            <Link to="../">
+            <Link to="../viewAllMovie">
             <a class="home_show-all" href="/">view all</a>
             </Link>
           </div>
@@ -83,7 +83,7 @@ function Home() {
           <div class="home_upcoming-title d-flex container">
             <h2>Upcoming Movies</h2>
             <Link to="/">
-              <a class="show-all" href="/">view all</a>
+              <a class="home_show-all" href="/viewAllMovie">view all</a>
             </Link>
           </div>
           <div class="home_upcoming-month d-flex container">

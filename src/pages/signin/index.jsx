@@ -97,7 +97,7 @@ function SignIn() {
                 onChange={handleChangeForm}
               />
             </div>
-            <div class="mb-3">
+            <div class="mb-3 signIn_password-input">
               <label for="exampleInputPassword1" class="form-label"
                 >Password</label
               >
@@ -139,10 +139,12 @@ function SignIn() {
               Forgot your password?
               <button class="signIn_click-input"> Reset now </button>
             </p>
-            <p>
-              Don’t have an account?
-              <button class="signIn_click-input"> Sign Up </button>
-            </p>
+            <a href="../signUp">
+              <p>
+                Don’t have an account?
+                <button class="signIn_click-input"> Sign Up </button>
+              </p>
+            </a>
           </div>
         </div>
       </div>

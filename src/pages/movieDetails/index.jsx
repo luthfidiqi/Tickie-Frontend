@@ -79,6 +79,7 @@ function MovieDetails() {
                   <div class="icon-text-filter d-flex">
                     <img src={calendar} alt="" />
                     <p>21/07/20</p>
+                    {/* <input type="date"/> */}
                   </div>
                   <img src={arrow} alt="" />
                 </button>

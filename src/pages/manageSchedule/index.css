@@ -1,0 +1,15 @@
+.manageSchedule {
+  background-color: #f5f6f8;
+}
+
+.manageSchedule_main {
+  padding-top: 56px;
+  padding-bottom: 48px;
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  main {
+    flex-direction: column;
+  }
+}

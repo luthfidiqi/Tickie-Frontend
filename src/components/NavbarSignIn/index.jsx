@@ -38,6 +38,7 @@ function NavbarSignIn() {
               >
             </li>
           </ul>
+          <a href="../profile_accountSet">
           <div class="d-flex">
             <img src={search} alt="" />
             <img
@@ -46,6 +47,7 @@ function NavbarSignIn() {
               alt=""
             />
           </div>
+          </a>
         </div>
       </div>
     </nav>
