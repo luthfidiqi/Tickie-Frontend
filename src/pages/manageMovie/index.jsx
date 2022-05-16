@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import CardMovie from "../../components/CardMovie";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getDataMovie } from "../../stores/actions/movie";
+import { getDataMovie, postMovie, updateMovie  } from "../../stores/actions/movie";
 
 // Assets IMG
 import spiderman from "../../assets/img/movie-details/spiderman.png";
@@ -87,10 +87,10 @@ function ManageMovie() {
     //   // name, "Bagus"
     // }
 
-    // dispatch(postMovie(formData));
-    // getdataMovie();
+    dispatch(postMovie(formData));
+    getdataMovie();
     setImage(null);
-    // resetForm();
+    resetForm();
   }
 
   const setUpdate = (data) => {
@@ -123,21 +123,35 @@ function ManageMovie() {
     e.preventDefault();
     console.log(form);
     console.log(idMovie);
-    // const formData = new FormData();
-    // for (const data in form) {
-    //   formData.append(data, form[data]);
-    // }
-    // dispatch(updateMovie(idMovie, formData));
-    // getdataMovie();
+    const formData = new FormData();
+    for (const data in form) {
+      formData.append(data, form[data]);
+    }
+    dispatch(updateMovie(idMovie, formData));
+    getdataMovie();
 
     setIsUpdate(false);
     setImage(null);
-    // resetForm();
+    resetForm();
   };
   
   const handleDelete = (id) => {
     console.log(id);
   };
+
+  const resetForm = () => {
+    setForm({
+      name: "",
+      category: "",
+      synopsis: "",
+      director: "",
+      releaseDate: "",
+      casts: "",
+      duration: "",
+      image: null
+    });
+  };
+
 
   // PAGINATION
   const handlePagination = (data) => {
@@ -279,11 +293,13 @@ function ManageMovie() {
               </div>
               <div class="formMovie_content-btn d-flex">
                 <button
+                  type="submit"
                   class="d-flex formMovie_btn btn btn-outline-primary disable-mobile"
                 >
                   Reset
                 </button>
                 <button
+                  type="submit"
                   class="d-flex formMovie_btn-active btn btn-outline-primary"
                 >
                   {isUpdate ? "Update" : "Submit"}
