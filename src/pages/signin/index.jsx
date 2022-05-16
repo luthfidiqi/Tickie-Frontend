@@ -42,7 +42,8 @@ function SignIn() {
       const resultUser = [
         {
           id: 1,
-          name: "Luthfi"
+          name: "Luthfi",
+          role: "admin"
         }
       ];
       // console.log(resultLogin);

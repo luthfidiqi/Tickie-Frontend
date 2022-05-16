@@ -1,17 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Assets IMG
-import spiderMan from "../../assets/img/home/spider-man.png";
-
-function CardHome(props) {
+function CardMovie(props) {
     
     const { id, name, category, image } = props.data;
-    // const image = "vqvzjbe2sk1urzt5hgkx.png";
 
   return (
     <>
-    <div class="showing-card-active"> 
+    <div class="showing-card-active my-4 "> 
         <img
         src={
           image
@@ -21,31 +17,22 @@ function CardHome(props) {
         className="card-img-top"
         alt="..."
         />
-        {/* <span>img : {image}</span> */}
         <div class="showing-card-content">
             <h3>{name}</h3>
             <p>{category}</p>
-            <button 
-            class="d-flex btn-showing btn btn-outline-primary"
-            onClick={() => props.handleDetail(id)}>
-              Detail
+            <button class="d-flex btn-showing btn btn-outline-primary" onClick={() => props.setUpdate(props.data)}>
+            Update
             </button>
-            {/* <Link to="../movieDetails">
-            <a
-                class="d-flex btn-showing btn btn-outline-primary"
-                aria-current="page"
-                href="/"
-            >
-            Details
-            </a>
-            </Link> */}
+            <button class="d-flex btn-showing btn btn-outline-primary mt-3 btn-delete" onClick={() => props.handleDelete(id)}>
+            Delete
+            </button>
         </div>
     </div>
     </>
   );
 }
 
-CardHome.defaultProps = {
+CardMovie.defaultProps = {
     category: "Default Category",
     data: {
       id: "",
@@ -54,4 +41,11 @@ CardHome.defaultProps = {
     }
   };
 
-export default CardHome;
+export default CardMovie;
+
+CardMovie.propTypes = {
+    data: PropTypes.object,
+    handleDetail: PropTypes.func,
+    setUpdate: PropTypes.func,
+    handleDelete: PropTypes.func
+  };

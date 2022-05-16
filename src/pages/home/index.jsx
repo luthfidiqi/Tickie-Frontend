@@ -15,10 +15,11 @@ import tenet from "../../assets/img/home/tenet.png";
 import theWitches from "../../assets/img/home/the-witches.png";
 
 function Home() {
-  const limit = 6;
+  const limit = 9;
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const [pageInfo, setPageInfo] = useState({});
+  const sort = "id ASC";
 
   useEffect(() => {
     getdataMovie();
@@ -28,11 +29,11 @@ function Home() {
     try {
       console.log("GET DATA MOVIE");
       // Input
-        // console.log(limit);
-        // console.log(page);
+        console.log(limit);
+        console.log(page);
       // Proses
       const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
-        // console.log(resultMovie);
+        console.log(resultMovie);
       // Output
       setData(resultMovie.data.data);
       setPageInfo(resultMovie.data.pagination);

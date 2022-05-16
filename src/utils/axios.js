@@ -1,13 +1,10 @@
 import axios from "axios";
 
-// const baseURL1 = process.env.BASE_URL_1
-// console.log(process.env.REACT_APP_URL);
-
 const axiosApiIntances = axios.create({
   // baseURL: process.env.REACT_APP_URL
-  baseURL: "https://project-tickitz.herokuapp.com/"
+  // baseURL: "https://project-tickitz.herokuapp.com/"
   // baseURL: "https://project-tickie.herokuapp.com/"
-  // baseURL: "http://localhost:3001/"
+  baseURL: "http://localhost:3001/"
 });
 
 // Add a request interceptor
@@ -35,6 +32,35 @@ axiosApiIntances.interceptors.response.use(
   function (error) {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
+    if (error.response.status === 403) {
+      if (error.response.data.msg !== "jwt expired") {
+        localStorage.clear();
+        window.location.href = "/signIn";
+      } else {
+        const refreshToken = localStorage.getItem("refreshToken");
+        // console.log(refreshToken);
+        axiosApiIntances
+          .post("auth/refresh", { refreshToken })
+          .then((res) => {
+            // res = {
+            //   data: {
+            //     data: {
+            //       id: ...
+            //       token: ...
+            //       refreshToken: ...
+            //     }
+            //   }
+            // }
+            localStorage.setItem("token", res.data.data.token);
+            localStorage.setItem("refreshToken", res.data.data.refreshToken);
+            window.location.reload();
+          })
+          .catch(() => {
+            localStorage.clear();
+            window.location.href = "/signIn";
+          });
+      }
+    }
     return Promise.reject(error);
   }
 );

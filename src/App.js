@@ -10,27 +10,58 @@ import Payment from "./pages/payment";
 import ViewAllMovie from "./pages/viewAllMovie";
 import ManageMovie from "./pages/manageMovie";
 import ManageSchedule from "./pages/manageSchedule";
-
 import ProfileAccountSet from "./pages/profileAccountSet";
 
+import PrivateRoute from "./helpers/route/privateRoute";
+import PublicRoute from "./helpers/route/publicRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+
+        {/* Route Auth */}
+        {/* <Route path="basic/counter" element={<BasicCounter />} />
+        <Route path="basic/react" element={<BasicReact />} />
+
+        <Route element={<PublicRoute restricted={true} />}>
+          <Route path="signIn" element={<SignIn />} />
+          <Route path="signUp" element={<SignUp />} />
+        </Route>
+
+        <Route element={<PublicRoute restricted={false} />}>
+          <Route path="home" element={<Home />} />
+          <Route path="viewAllMovie" element={<ViewAllMovie />} />
+        </Route>
+
+        <Route element={<PrivateRoute isAdmin={false} />}>
+          <Route path="movieDetails/:id" element={<MovieDetails />} />
+          <Route path="order" element={<Order />} />
+          <Route path="payment" element={<Payment />} />
+        </Route>
+
+        <Route element={<PrivateRoute isAdmin={true} />}>
+          <Route path="manageMovie" element={<ManageMovie />} />
+          <Route path="manageSchedule" element={<ManageSchedule />} />
+        </Route>
+
+        <Route path="profileAccountSet" element={<ProfileAccountSet />} /> */}
+
+        {/* Non Route */}
         <Route path="basic/counter" element={<BasicCounter />} />
         <Route path="basic/react" element={<BasicReact />} />
         <Route path="signIn" element={<SignIn />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="home" element={<Home />} />
+        <Route path="viewAllMovie" element={<ViewAllMovie />} />
         <Route path="movieDetails" element={<MovieDetails />} />
         <Route path="order" element={<Order />} />
         <Route path="payment" element={<Payment />} />
-        <Route path="viewAllMovie" element={<ViewAllMovie />} />
         <Route path="manageMovie" element={<ManageMovie />} />
         <Route path="manageSchedule" element={<ManageSchedule />} />
 
         <Route path="profileAccountSet" element={<ProfileAccountSet />} />
+
       </Routes>
     </BrowserRouter>
   );

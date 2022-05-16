@@ -109,6 +109,63 @@
   margin-left: 24px;
 }
 
+/* PAGINATION NEW */
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+  justify-content: center;
+  margin-top: 32px;
+}
+.pagination > .active > a {
+  background-color: #5f2eea;
+  color: white;
+  border: none;
+  margin: 0 10px;
+  font-size: 18px !important;
+  background-color: #5f2eea;
+  padding: 8px 16px;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  box-shadow: 0px 8px 16px #602eea3d;
+}
+.pagination > li > a {
+  background-color: white;
+  margin: 0 10px;
+  font-size: 18px !important;
+  color: #4e4b66;
+  padding: 8px 16px;
+  border: 1px solid #dedede;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #4e4b66;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
+}
+
 @media (max-width: 575.98px) {
   main {
     flex-direction: column;
