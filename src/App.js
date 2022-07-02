@@ -59,7 +59,7 @@ function App() {
         {/* Non Route */}
         {/* <Route path="basic/counter" element={<BasicCounter />} />
         <Route path="basic/react" element={<BasicReact />} /> */}
-        <Route path="home" element={<Home />} />
+        <Route path="" element={<Home />} />
 
         <Route path="signIn" element={<SignIn />} />
         <Route path="signUp" element={<SignUp />} />
