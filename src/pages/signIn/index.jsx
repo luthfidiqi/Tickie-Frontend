@@ -8,7 +8,7 @@ import logoMobile from "../../assets/img/sign-in/Tickitz-color.svg";
 import logoWeb from "../../assets/img/sign-in/tickitz-white.png";
 import iconPassword from "../../assets/img/sign-in/pw-icon.svg";
 
-function Signin() {
+function SignIn() {
   const navigate = useNavigate();
   // const handleSignIn = () => {
   //   navigate("../home");
@@ -150,4 +150,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default SignIn;
