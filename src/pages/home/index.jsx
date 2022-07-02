@@ -1,6 +1,7 @@
 import "./index.css";
 import Footer from "../../components/footer";
-import NavbarSignUp from "../../components/NavbarSignUp";
+// import NavbarSignUp from "../../components/NavbarSignUp";
+import NavbarSignIn from "../../components/NavbarSignIn";
 import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
@@ -47,7 +48,7 @@ function Home() {
 
   return (
     <>
-      <NavbarSignUp />
+      <NavbarSignIn />
 
       <header class="home_banner container d-flex">
         <div class="home_banner-content">

@@ -10,6 +10,7 @@ import hiflix from "../../assets/img/movie-details/hiflix.svg";
 import spiderman from "../../assets/img/movie-details/spiderman.png";
 
 function ManageSchedule() {
+  document.title = "Tickie";
   return (
     <>
       <div class="manageSchedule">

@@ -16,7 +16,7 @@ import { getDataMovie, postMovie, updateMovie } from "../../stores/actions/movie
 // import spiderman from "../../assets/img/movie-details/spiderman.png";
 
 function ManageMovie() {
-  document.title = "Tickitz | Home";
+  document.title = "Tickie";
   const navigate = useNavigate();
   const dispatch = useDispatch();
 

@@ -61,7 +61,7 @@ function Ticket() {
               </div>
             </div>
             <div className="qrcode-box">
-              <div className="top">
+              <div className="top disable-mobile">
                 <img src={ticketLogo} alt="" />
               </div>
               <div className="down">

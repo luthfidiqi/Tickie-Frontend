@@ -59,13 +59,13 @@ function App() {
         {/* Non Route */}
         {/* <Route path="basic/counter" element={<BasicCounter />} />
         <Route path="basic/react" element={<BasicReact />} /> */}
-        <Route path="" element={<Home />} />
 
-        <Route path="signIn" element={<SignIn />} />
+        <Route path="/" element={<SignIn />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="forgot" element={<Forgot />} />
         <Route path="updatePass" element={<UpdatePass />} />
 
+        <Route path="home" element={<Home />} />
         <Route path="viewAllMovie" element={<ViewAllMovie />} />
         <Route path="movieDetails" element={<MovieDetails />} />
         <Route path="order" element={<Order />} />

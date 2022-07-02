@@ -53,7 +53,7 @@ function SignIn() {
       localStorage.setItem("token", resultLogin.data.data.token);
       localStorage.setItem("refreshToken", resultLogin.data.data.refreshToken);
       localStorage.setItem("dataUser", JSON.stringify(resultUser[0]));
-      navigate("/");
+      navigate("../home");
     } catch (error) {
       console.log(error.response);
       setIsError(true);

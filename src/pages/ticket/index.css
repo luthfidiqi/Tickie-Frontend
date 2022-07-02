@@ -117,3 +117,25 @@
   -ms-border-radius: 0 0 16px 16px;
   -o-border-radius: 0 0 16px 16px;
 }
+
+@media (max-width: 575.98px) {
+  .ticket-main-box {
+    flex-direction: column;
+  }
+  .ticket-box {
+    padding: 40px 24px;
+  }
+  .ticket-info-box {
+    width: 100%;
+  }
+  .qrcode-box {
+    width: 100%;
+  }
+  .qrcode-box .down {
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+}

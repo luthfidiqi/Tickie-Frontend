@@ -16,3 +16,24 @@
 .avatar {
   margin-left: 48px;
 }
+
+.disable-web {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+  .mobile-navbar .navbar-nav {
+    margin-top: 30px;
+  }
+  .mobile-navbar .navbar-nav .nav-item .nav-link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #dedede;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .disable-web {
+    display: flex;
+  }
+}

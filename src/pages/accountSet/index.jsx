@@ -16,6 +16,17 @@ function AccountSet() {
       <div class="profile">
         <NavbarSignIn></NavbarSignIn>
 
+        <section className="switch-mobile">
+          <div className="switch-nav">
+            <div className="switch-active">
+              <Link to="/accountSet">Account Settings</Link>
+            </div>
+            <div className="switch-nonactive">
+              <Link to="/orderHistory">Order History</Link>
+            </div>
+          </div>
+        </section>
+
         <main class="profile_main d-flex container">
           <div class="profile-left-content">
             <section class="user-info">
@@ -36,9 +47,9 @@ function AccountSet() {
             </section>
           </div>
           <div class="profile-right-content">
-            <div className="switch-nav">
+            <div className="switch-nav disable-mobile">
               <div className="switch-active">
-                <Link to="/profileAccountSet">Account Settings</Link>
+                <Link to="/accountSet">Account Settings</Link>
               </div>
               <div className="switch-nonactive">
                 <Link to="/orderHistory">Order History</Link>

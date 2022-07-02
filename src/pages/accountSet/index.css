@@ -110,22 +110,48 @@
   width: 100% !important;
 }
 
+.switch-mobile {
+  display: none;
+}
 /* PAYMENT INFO */
 
 @media (max-width: 575.98px) {
-  main {
+  .profile,
+  .profile-left-content,
+  .profile_main,
+  .profile-right-content {
+    width: 100%;
+  }
+  .details-form {
     flex-direction: column;
   }
-  .left-content {
+  .details-input {
+    margin: 0 !important;
+  }
+  .switch-mobile {
+    display: flex;
+  }
+  .switch-mobile .switch-nav {
+    padding: 24px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+  }
+  .order-top {
+    flex-direction: column;
+  }
+  .order-top img {
+    width: 50%;
+  }
+  .order-top h4 {
+    font-size: 18px;
+  }
+  .btn-ticket-active {
     width: 100%;
   }
-  .right-content {
-    width: 100%;
-  }
-  .disable-mobile {
-    display: none !important;
-  }
-  .btn-payment-active {
+  .btn-ticket-nonactive {
     width: 100%;
   }
 }
