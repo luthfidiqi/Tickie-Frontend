@@ -1,10 +1,8 @@
 import axios from "axios";
 
 const axiosApiIntances = axios.create({
-  // baseURL: process.env.REACT_APP_URL
-  // baseURL: "https://project-tickitz.herokuapp.com/"
-  // baseURL: "https://project-tickie.herokuapp.com/"
-  baseURL: "http://localhost:3001/"
+  baseURL: process.env.REACT_APP_URL_BE
+  // baseURL: "http://localhost:3001/"
 });
 
 // Add a request interceptor

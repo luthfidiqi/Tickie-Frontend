@@ -11,6 +11,10 @@
 
 /* ---------------------- SIGN IN ---------------------- */
 
+.auth-cont {
+  width: 100%;
+}
+
 .signIn {
   display: flex;
   width: 100%;
@@ -100,6 +104,7 @@
 
 .signIn_btn {
   background-color: #5f2eea;
+  border: none;
   color: #f7f7fc;
   font-family: "Mulish", sans-serif;
   font-size: 16px;

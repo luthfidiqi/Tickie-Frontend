@@ -338,11 +338,12 @@ footer {
   color: #4e4b66;
 }
 
-/* .showing-list,
+.showing-list,
+.home_showing-list,
 .upcoming-month {
-  overflow-x: auto;
+  overflow-x: scroll;
   padding-bottom: 70px;
-} */
+}
 
 .follow-content-mobile {
   display: none;

@@ -69,87 +69,83 @@ function SignIn() {
   return (
     <>
       <main class="signIn d-flex">
-      <div class="signIn_image">
-        <img src={logoWeb} alt="tickitz logo" />
-        <h1>wait, watch, wow!</h1>
-      </div>
-      <div class="signIn_content">
-        <div class="signIn_logo-mobile">
-          <img src={logoMobile} alt="" />
+        <div class="signIn_image">
+          <img src={logoWeb} alt="tickitz logo" />
+          <h1>wait, watch, wow!</h1>
         </div>
-        <div>
-          <h2>Sign In</h2>
-          <p>
-            Sign in with your data that you entered during your registration
-          </p>
-          <form class="signIn_form" onSubmit={handleSubmit} onReset={handleReset}>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                name="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Write your email"
-                value={form.email}
-                onChange={handleChangeForm}
-              />
-            </div>
-            <div class="mb-3 signIn_password-input">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
-              <input
-                type="password"
-                name="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Write your password"
-                value={form.password}
-                onChange={handleChangeForm}
-              />
-              <img
-                class="signIn_icon-pw"
-                src={iconPassword}
-                alt="password icon"
-              />
-            </div>
-            {/* Alert */}
-            {!message ? null : isError ? (
-              <div className="alert alert-danger" role="alert">
-                {message}
+        <div class="signIn_content">
+          <div class="signIn_logo-mobile">
+            <img src={logoMobile} alt="" />
+          </div>
+          <div className="auth-cont">
+            <h2>Sign In</h2>
+            <p>Sign in with your data that you entered during your registration</p>
+            <form class="signIn_form" onSubmit={handleSubmit} onReset={handleReset}>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Write your email"
+                  value={form.email}
+                  onChange={handleChangeForm}
+                />
               </div>
-            ) : (
-              <div className="alert alert-primary" role="alert">
-                {message}
+              <div class="mb-3 signIn_password-input">
+                <label for="exampleInputPassword1" class="form-label">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Write your password"
+                  value={form.password}
+                  onChange={handleChangeForm}
+                />
+                <img class="signIn_icon-pw" src={iconPassword} alt="password icon" />
               </div>
-            )}
-            <button
-              // onClick={handleSignIn}
-              type="submit"
-              class="signIn_btn btn btn-primary"
-            >
-              Sign In
-            </button>
-          </form>
-          <div class="signIn_other-input">
-            <p>
-              Forgot your password?
-              <button class="signIn_click-input"> Reset now </button>
-            </p>
-            <a href="../signUp">
-              <p>
-                Don’t have an account?
-                <button class="signIn_click-input"> Sign Up </button>
-              </p>
-            </a>
+              {/* Alert */}
+              {!message ? null : isError ? (
+                <div className="alert alert-danger" role="alert">
+                  {message}
+                </div>
+              ) : (
+                <div className="alert alert-primary" role="alert">
+                  {message}
+                </div>
+              )}
+              <button
+                // onClick={handleSignIn}
+                type="submit"
+                class="signIn_btn btn btn-primary"
+              >
+                Sign In
+              </button>
+            </form>
+            <div class="signIn_other-input">
+              <a href="../forgot">
+                <p>
+                  Forgot your password?
+                  <button class="signIn_click-input"> Reset now </button>
+                </p>
+              </a>
+              <a href="../signUp">
+                <p>
+                  Don’t have an account?
+                  <button class="signIn_click-input"> Sign Up </button>
+                </p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
     </>
   );
 }

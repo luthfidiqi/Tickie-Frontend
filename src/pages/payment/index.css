@@ -19,10 +19,6 @@
 
 /* PAYMENT INFO */
 
-.payment-info {
-  margin-bottom: 48px;
-}
-
 .payment-info h1 {
   font-size: 24px;
   color: #14142b;
@@ -184,9 +180,16 @@
   color: #4e4b66;
 }
 
+.web-disable {
+  display: none;
+}
+
 @media (max-width: 575.98px) {
   main {
     flex-direction: column;
+  }
+  .payment_main {
+    padding-top: 0;
   }
   .left-content {
     width: 100%;
@@ -199,5 +202,28 @@
   }
   .btn-payment-active {
     width: 100%;
+  }
+  .payment-info-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background-color: white;
+    margin-bottom: 30px;
+  }
+  .payment-info-mobile h2 {
+    color: #aaaaaa;
+    font-size: 16px;
+  }
+  .payment-info-mobile p {
+    color: #14142b;
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 600;
+  }
+  .payment-info h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
   }
 }

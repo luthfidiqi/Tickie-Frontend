@@ -1,0 +1,131 @@
+.profile {
+  background-color: #f5f6f8;
+}
+
+.profile_main {
+  padding-top: 56px;
+  padding-bottom: 48px;
+  width: 100%;
+}
+
+.profile-left-content {
+  width: 30%;
+  margin-right: 24px;
+}
+
+.profile-right-content {
+  width: 70%;
+}
+
+/* USER INFO */
+.user-info {
+  background-color: white;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  padding: 40px;
+}
+
+.user-info h1 {
+  font-size: 16px;
+  color: #4e4b66;
+  margin-bottom: 30px;
+}
+
+.user-info h2 {
+  font-size: 20px;
+  color: #14142b;
+  margin: 15px 0;
+}
+
+.user-info h3 {
+  font-size: 14px;
+  color: #4e4b66;
+  margin-bottom: 40px;
+}
+
+.info-line {
+  height: 1px;
+  width: 100%;
+  background-color: #dedede;
+}
+
+/* SWITCH NAVBAR */
+.switch-nav {
+  background-color: white;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  height: 85px;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.switch-active {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #5f2eea;
+  margin-right: 50px;
+}
+
+.switch-active a {
+  color: #14142b;
+  font-weight: 500;
+}
+
+.switch-nonactive {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.switch-nonactive a {
+  color: #aaaaaa;
+  font-weight: 500;
+}
+
+/* DETAILS INFORMATION */
+.details {
+  background-color: white;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  padding: 40px 50px;
+}
+
+.details-form {
+  width: 100%;
+}
+
+.details-input {
+  width: 100% !important;
+}
+
+/* PAYMENT INFO */
+
+@media (max-width: 575.98px) {
+  main {
+    flex-direction: column;
+  }
+  .left-content {
+    width: 100%;
+  }
+  .right-content {
+    width: 100%;
+  }
+  .disable-mobile {
+    display: none !important;
+  }
+  .btn-payment-active {
+    width: 100%;
+  }
+}

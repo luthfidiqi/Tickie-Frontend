@@ -113,4 +113,22 @@
   main {
     flex-direction: column;
   }
+  .allMovie_title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .allMovie_title h1 {
+    margin-bottom: 30px;
+  }
+  .allMovie_title .dropdown {
+    width: 30%;
+    margin-right: 10px;
+  }
+  .view-all-movie-list {
+    overflow-x: scroll;
+    padding-bottom: 40px;
+  }
+  .allMovie {
+    padding: 40px 20px;
+  }
 }

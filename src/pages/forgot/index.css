@@ -1,0 +1,20 @@
+.forgot_image {
+  background-image: url(../../assets/img/sign-in/sign-img.png);
+  background-size: cover;
+  width: 58.5%;
+  padding: 150px;
+  color: white;
+}
+.forgot-cont {
+  width: 100%;
+}
+.forgot-cont h2 {
+  font-size: 32px;
+}
+
+@media (max-width: 575.98px) {
+  /* ---------------------- FORGOT ---------------------- */
+  .forgot_image {
+    display: none;
+  }
+}
