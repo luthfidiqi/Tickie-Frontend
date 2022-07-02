@@ -17,8 +17,8 @@ function Home() {
   const limit = 9;
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
-  const [pageInfo, setPageInfo] = useState({});
-  const sort = "id ASC";
+  // const [pageInfo, setPageInfo] = useState({});
+  // const sort = "id ASC";
 
   useEffect(() => {
     getdataMovie();

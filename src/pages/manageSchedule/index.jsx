@@ -1,7 +1,7 @@
 import "./index.css";
 import Footer from "../../components/footer";
 import NavbarSignIn from "../../components/NavbarSignIn";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // Assets IMG
 import cineone from "../../assets/img/movie-details/cine.svg";
@@ -12,11 +12,11 @@ import spiderman from "../../assets/img/movie-details/spiderman.png";
 function ManageSchedule() {
   return (
     <>
-    <div class="manageSchedule">
-      <NavbarSignIn></NavbarSignIn>
+      <div class="manageSchedule">
+        <NavbarSignIn></NavbarSignIn>
 
         <main class="manageSchedule_main container">
-        <section class="allMovie_title">
+          <section class="allMovie_title">
             <h1>Form Schedule</h1>
             <div class="formMovie">
               <div class="d-flex">
@@ -25,9 +25,9 @@ function ManageSchedule() {
                 </div>
                 <div class="form-grup-1">
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Movie Name</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Movie Name
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -37,9 +37,9 @@ function ManageSchedule() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Director</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Director
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -49,9 +49,9 @@ function ManageSchedule() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Release date</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Release date
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -64,9 +64,9 @@ function ManageSchedule() {
 
                 <div class="form-grup-2">
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Movie Name</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Movie Name
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -76,9 +76,9 @@ function ManageSchedule() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Director</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Director
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -88,9 +88,9 @@ function ManageSchedule() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Release date</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Release date
+                    </label>
                     <input
                       type="text"
                       name="text"
@@ -125,45 +125,101 @@ function ManageSchedule() {
             <h1>Data Schedule</h1>
             <div class="d-flex">
               <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="btn btn-secondary dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Sort
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="btn btn-secondary dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Location
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="dropdown m-0">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="btn btn-secondary dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Movie
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
-          
           </section>
 
           <section class="allMovie">
-          <div class="showtimes-list">
-            {/* <!-- CARD GRID--> */}
+            <div class="showtimes-list">
+              {/* <!-- CARD GRID--> */}
               {/* <!-- ROW 1 --> */}
               <div class="d-flex justify-content-space-between">
                 <div class="dataSchedule-card">
@@ -297,7 +353,6 @@ function ManageSchedule() {
                     </a>
                   </div>
                 </div>
-
               </div>
 
               {/* <!-- ROW 2 --> */}
@@ -433,7 +488,6 @@ function ManageSchedule() {
                     </a>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
@@ -444,16 +498,28 @@ function ManageSchedule() {
                 <li class="page-item active" aria-current="page">
                   <span class="page-link">1</span>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    2
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    3
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    4
+                  </a>
+                </li>
               </ul>
             </nav>
           </section>
         </main>
 
-      <Footer></Footer>
-    </div>
+        <Footer></Footer>
+      </div>
     </>
   );
 }

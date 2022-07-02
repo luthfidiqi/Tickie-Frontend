@@ -11,7 +11,7 @@ import gopay from "../../assets/img/payment/logos_gopay.svg";
 import ovo from "../../assets/img/payment/logos_ovo.svg";
 import paypal from "../../assets/img/payment/logos_paypal.svg";
 import visa from "../../assets/img/payment/logos_visa.svg";
-import warning from "../../assets/img/payment/warning-icon.svg";
+// import warning from "../../assets/img/payment/warning-icon.svg";
 
 function Payment() {
   return (

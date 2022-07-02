@@ -2,7 +2,7 @@ import "./index.css";
 import Footer from "../../components/footer";
 import NavbarSignIn from "../../components/NavbarSignIn";
 
-import axios from "../../utils/axios";
+// import axios from "../../utils/axios";
 import { useEffect, useState } from "react";
 import Pagination from "react-paginate";
 import { useNavigate } from "react-router-dom";
@@ -10,10 +10,10 @@ import { useNavigate } from "react-router-dom";
 import CardMovie from "../../components/CardMovie";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getDataMovie, postMovie, updateMovie  } from "../../stores/actions/movie";
+import { getDataMovie, postMovie, updateMovie } from "../../stores/actions/movie";
 
 // Assets IMG
-import spiderman from "../../assets/img/movie-details/spiderman.png";
+// import spiderman from "../../assets/img/movie-details/spiderman.png";
 
 function ManageMovie() {
   document.title = "Tickitz | Home";
@@ -91,19 +91,10 @@ function ManageMovie() {
     getdataMovie();
     setImage(null);
     resetForm();
-  }
+  };
 
   const setUpdate = (data) => {
-    const { 
-      id,
-      name,
-      category,
-      synopsis,
-      director,
-      releaseDate,
-      casts,
-      duration,
-      image } = data;
+    const { id, name, category, synopsis, director, releaseDate, casts, duration, image } = data;
     setForm({
       ...form,
       name,
@@ -134,7 +125,7 @@ function ManageMovie() {
     setImage(null);
     resetForm();
   };
-  
+
   const handleDelete = (id) => {
     console.log(id);
   };
@@ -152,7 +143,6 @@ function ManageMovie() {
     });
   };
 
-
   // PAGINATION
   const handlePagination = (data) => {
     setPage(data.selected + 1);
@@ -160,8 +150,8 @@ function ManageMovie() {
 
   return (
     <>
-    <div class="manageMovie">
-      <NavbarSignIn></NavbarSignIn>
+      <div class="manageMovie">
+        <NavbarSignIn></NavbarSignIn>
 
         <main class="manageMovie_main container">
           <section class="allMovie_title">
@@ -169,13 +159,13 @@ function ManageMovie() {
             <form class="formMovie" onSubmit={isUpdate ? handleUpdate : handleSubmit}>
               <div class="d-flex">
                 <div class="movieImage">
-                {image && <img src={image} alt="Image Movie Preview" />}
+                  {image && <img src={image} alt="Image Movie Preview" />}
                 </div>
                 <div class="form-grup-1">
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Movie Name</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Movie Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -187,9 +177,9 @@ function ManageMovie() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Director</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Director
+                    </label>
                     <input
                       type="text"
                       name="director"
@@ -201,9 +191,9 @@ function ManageMovie() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Release date</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Release date
+                    </label>
                     <input
                       type="text"
                       name="releaseDate"
@@ -218,9 +208,9 @@ function ManageMovie() {
 
                 <div class="form-grup-2">
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Category</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Category
+                    </label>
                     <input
                       type="text"
                       name="category"
@@ -232,9 +222,9 @@ function ManageMovie() {
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Casts</label
-                    >
+                    <label for="formMovie-1" class="form-label">
+                      Casts
+                    </label>
                     <input
                       type="text"
                       name="casts"
@@ -246,40 +236,40 @@ function ManageMovie() {
                     />
                   </div>
                   <div className="d-flex">
-                  <div class="mb-3 me-4">
-                    <label for="formMovie-1" class="form-label"
-                      >Duration</label
-                    >
-                    <input
-                      type="text"
-                      name="duration"
-                      class="form-control"
-                      id="formMovie-1"
-                      placeholder="Input duration..."
-                      onChange={(event) => handleChangeForm(event)}
-                      value={form.duration}
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label"
-                      >Image</label
-                    >
-                    <input
-                      type="file" 
-                      name="image" 
-                      class="form-control"
-                      onChange={(event) => handleChangeForm(event)}
-                    />
-                  </div>
+                    <div class="mb-3 me-4">
+                      <label for="formMovie-1" class="form-label">
+                        Duration
+                      </label>
+                      <input
+                        type="text"
+                        name="duration"
+                        class="form-control"
+                        id="formMovie-1"
+                        placeholder="Input duration..."
+                        onChange={(event) => handleChangeForm(event)}
+                        value={form.duration}
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="formMovie-1" class="form-label">
+                        Image
+                      </label>
+                      <input
+                        type="file"
+                        name="image"
+                        class="form-control"
+                        onChange={(event) => handleChangeForm(event)}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="form-grup-3">
                 <div class="mb-3">
-                  <label for="formMovie-1" class="form-label"
-                    >Synopsis</label
-                  >
+                  <label for="formMovie-1" class="form-label">
+                    Synopsis
+                  </label>
                   <textarea
                     type="textarea"
                     name="synopsis"
@@ -298,32 +288,44 @@ function ManageMovie() {
                 >
                   Reset
                 </button>
-                <button
-                  type="submit"
-                  class="d-flex formMovie_btn-active btn btn-outline-primary"
-                >
+                <button type="submit" class="d-flex formMovie_btn-active btn btn-outline-primary">
                   {isUpdate ? "Update" : "Submit"}
                 </button>
               </div>
             </form>
-
-      
-              
-            
           </section>
 
           <section class="allMovie_title mb-5 d-flex">
             <h1>Data Movie</h1>
             <div class="d-flex">
               <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  class="btn btn-secondary dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Sort
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="ml-2">
@@ -337,7 +339,6 @@ function ManageMovie() {
                 />
               </div>
             </div>
-          
           </section>
 
           <section class="allMovie">
@@ -354,11 +355,7 @@ function ManageMovie() {
               ) : (
                 movie.data.map((item) => (
                   <div className="col" key={item.id}>
-                    <CardMovie 
-                    data={item}
-                    setUpdate={setUpdate}
-                    handleDelete={handleDelete}
-                    />
+                    <CardMovie data={item} setUpdate={setUpdate} handleDelete={handleDelete} />
                   </div>
                 ))
               )}
@@ -391,8 +388,8 @@ function ManageMovie() {
           />
         </main>
 
-      <Footer></Footer>
-    </div>
+        <Footer></Footer>
+      </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BasicCounter from "./pages/basic/Counter/classComponent";
-import BasicReact from "./pages/basic/React";
+
+// import BasicCounter from "./pages/basic/Counter/classComponent";
+// import BasicReact from "./pages/basic/React";
 
 import SignIn from "./pages/signIn";
 import SignUp from "./pages/signUp";
@@ -56,8 +57,8 @@ function App() {
         <Route path="profileAccountSet" element={<ProfileAccountSet />} /> */}
 
         {/* Non Route */}
-        <Route path="basic/counter" element={<BasicCounter />} />
-        <Route path="basic/react" element={<BasicReact />} />
+        {/* <Route path="basic/counter" element={<BasicCounter />} />
+        <Route path="basic/react" element={<BasicReact />} /> */}
 
         <Route path="signIn" element={<SignIn />} />
         <Route path="signUp" element={<SignUp />} />
