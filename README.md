@@ -20,13 +20,27 @@
 
 <br>
 
-## Requirement
+## **Contents**
+
+- [**Requirement**](#requirement)
+
+- [**Installation**](#installation)
+
+- [**Demo**](#demo)
+
+- [**License**](#license)
+
+<br>
+
+## **Requirement**
 
 - Node.js
 - node_modules : npm install or yarn install
 - Backend API
 
-## How to run the app ?
+<br>
+
+## **Installation**
 
 - Clone Repositories
 
@@ -36,9 +50,9 @@ https://github.com/luthfidiqi/Tickie-Frontend.git
 
 - Open Project Folder
 
-  ```
-  $ cd Tickie-Frontend
-  ```
+```
+$ cd Tickie-Frontend
+```
 
 - Intall NPM Package
 
@@ -59,7 +73,9 @@ REACT_APP_URL_CLOUDINARY=
 npm start
 ```
 
-## Demo
+<br>
+
+## **Demo**
 
 ### Link Website : [https://tickie.vercel.app/]
 
@@ -73,6 +89,8 @@ npm start
 
 <hr>
 
-## License
+<br>
+
+## **License**
 
 © [Luthfi Thufail Asiddiqi](https://github.com/luthfidiqi/)
