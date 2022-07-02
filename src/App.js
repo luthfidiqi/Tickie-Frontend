@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import BasicCounter from "./pages/basic/Counter/classComponent";
 // import BasicReact from "./pages/basic/React";
 
-import SignIn from "./pages/signin";
+import Signin from "./pages/signin";
 import SignUp from "./pages/signUp";
 import Forgot from "./pages/forgot";
 import UpdatePass from "./pages/updatePass";
@@ -60,7 +60,7 @@ function App() {
         {/* <Route path="basic/counter" element={<BasicCounter />} />
         <Route path="basic/react" element={<BasicReact />} /> */}
 
-        <Route path="signIn" element={<SignIn />} />
+        <Route path="signin" element={<Signin />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="forgot" element={<Forgot />} />
         <Route path="updatePass" element={<UpdatePass />} />
