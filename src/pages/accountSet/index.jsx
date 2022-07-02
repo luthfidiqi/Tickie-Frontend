@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
 
 // COMPONENT
@@ -11,6 +11,10 @@ import userPhoto from "../../assets/img/profile/user_photo.png";
 import iconPassword from "../../assets/img/sign-in/pw-icon.svg";
 
 function AccountSet() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    navigate("/");
+  };
   return (
     <>
       <div class="profile">
@@ -37,7 +41,7 @@ function AccountSet() {
                 <h3>Moviegoers</h3>
                 <div className="info-line"></div>
                 <button
-                  // onClick={handleSignIn}
+                  onClick={handleLogout}
                   type="submit"
                   class="signIn_btn btn btn-primary mt-4"
                 >

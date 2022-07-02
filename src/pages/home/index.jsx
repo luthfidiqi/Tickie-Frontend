@@ -66,9 +66,9 @@ function Home() {
               <div class="home_showing-line"></div>
             </div>
             <Link to="../viewAllMovie">
-              <a class="home_show-all" href="/">
+              <Link class="home_show-all" to="../viewAllMovie">
                 view all
-              </a>
+              </Link>
             </Link>
           </div>
           <div class="showing-list container d-flex">

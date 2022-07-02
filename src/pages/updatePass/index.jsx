@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 function UpdatePass() {
   const navigate = useNavigate();
   const handleUpdate = () => {
-    navigate("../signIn");
+    navigate("/");
   };
   return (
     <>

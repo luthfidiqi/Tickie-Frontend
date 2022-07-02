@@ -123,7 +123,7 @@ function Payment() {
                 <a
                   class="d-flex btn-payment-active btn btn-outline-primary"
                   aria-current="page"
-                  href="/"
+                  href="../orderHistory"
                 >
                   Pay your order
                 </a>

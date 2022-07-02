@@ -1,19 +1,20 @@
 import "./index.css";
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Assets IMG
 import logoTickitz from "../../assets/img/home/logo-tickitz-color.svg";
 import avatar from "../../assets/img/movie-details/avatar.png";
-import search from "../../assets/img/movie-details/search.svg";
+// import search from "../../assets/img/movie-details/search.svg";
 
 function NavbarSignIn() {
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="../home">
+          <Link class="navbar-brand" to="../home">
             <img src={logoTickitz} alt="" />
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -28,19 +29,19 @@ function NavbarSignIn() {
           <div class="collapse navbar-collapse mobile-navbar" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../home">
+                <Link class="nav-link active" aria-current="page" to="../home">
                   Home
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../viewAllMovie">
+                <Link class="nav-link active" aria-current="page" to="../viewAllMovie">
                   List Movie
-                </a>
+                </Link>
               </li>
               <li class="nav-item disable-web">
-                <a class="nav-link active" aria-current="page" href="../accountSet">
+                <Link class="nav-link active" aria-current="page" to="../accountSet">
                   Profile
-                </a>
+                </Link>
               </li>
               <li class="nav-item disable-web">
                 <div class="nav-link active">
@@ -50,10 +51,10 @@ function NavbarSignIn() {
             </ul>
 
             <div class="d-flex disable-mobile">
-              <img src={search} alt="" />
-              <a href="../accountSet">
+              {/* <img src={search} alt="" /> */}
+              <Link to="../accountSet">
                 <img class="avatar" src={avatar} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

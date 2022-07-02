@@ -9,6 +9,7 @@ import logoWeb from "../../assets/img/sign-in/tickitz-white.png";
 import iconPassword from "../../assets/img/sign-in/pw-icon.svg";
 
 function SignIn() {
+  document.title = "Tickie";
   const navigate = useNavigate();
   // const handleSignIn = () => {
   //   navigate("../home");

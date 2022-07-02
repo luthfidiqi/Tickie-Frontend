@@ -87,7 +87,7 @@ function SignUp() {
               </button>
             </form>
             <div class="signIn_other-input signUp_other-input align-items-center ">
-              <a href="../signIn">
+              <a href="/">
                 <p>
                   Already have account?
                   <button class="signIn_click-input"> Sign In </button>
