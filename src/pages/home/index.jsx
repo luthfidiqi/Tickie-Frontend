@@ -1,12 +1,13 @@
 import "./index.css";
-import Footer from "../../components/footer";
-// import NavbarSignUp from "../../components/NavbarSignUp";
-import NavbarSignIn from "../../components/NavbarSignIn";
-import { Link } from "react-router-dom";
-
 import { useEffect, useState } from "react";
-import CardHome from "../../components/CardHome";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
+
+// COMPONENT
+import Footer from "../../components/footer";
+import NavbarSignIn from "../../components/NavbarSignIn";
+import Card from "../../components/Card";
 
 // Assets IMG
 import blackWidow from "../../assets/img/home/black-widow.png";
@@ -15,15 +16,40 @@ import tenet from "../../assets/img/home/tenet.png";
 import theWitches from "../../assets/img/home/the-witches.png";
 
 function Home() {
-  const limit = 9;
+  const navigate = useNavigate();
+
+  const limit = 7;
+  const months = [
+    { number: "", title: "All Movie" },
+    { number: 1, title: "January" },
+    { number: 2, title: "February" },
+    { number: 3, title: "March" },
+    { number: 4, title: "April" },
+    { number: 5, title: "Mei" },
+    { number: 6, title: "June" },
+    { number: 7, title: "July" },
+    { number: 8, title: "Augst" },
+    { number: 9, title: "September" },
+    { number: 10, title: "October" },
+    { number: 11, title: "November" },
+    { number: 12, title: "Desember" }
+  ];
+
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
-  // const [pageInfo, setPageInfo] = useState({});
-  // const sort = "id ASC";
+  const [releaseDate, setReleaseDate] = useState("");
 
   useEffect(() => {
     getdataMovie();
   }, []);
+
+  useEffect(() => {
+    getdataMovie();
+  }, [page]);
+
+  useEffect(() => {
+    getdataMovie();
+  }, [releaseDate]);
 
   const getdataMovie = async () => {
     try {
@@ -32,7 +58,7 @@ function Home() {
       console.log(limit);
       console.log(page);
       // Proses
-      const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}`);
+      const resultMovie = await axios.get(`movie?page=${page}&limit=${limit}&month=${releaseDate}`);
       console.log(resultMovie);
       // Output
       setData(resultMovie.data.data);
@@ -44,6 +70,7 @@ function Home() {
 
   const handleDetailMovie = (id) => {
     console.log(id);
+    navigate(`/detail/${id}`);
   };
 
   return (
@@ -74,7 +101,7 @@ function Home() {
           <div class="showing-list container d-flex">
             {data.map((item) => (
               <div key={item.id}>
-                <CardHome data={item} handleDetail={handleDetailMovie} />
+                <Card data={item} handleDetail={handleDetailMovie} />
               </div>
             ))}
           </div>
@@ -84,173 +111,32 @@ function Home() {
           <div class="home_upcoming-title d-flex container">
             <h2>Upcoming Movies</h2>
             <Link to="../viewAllMovie">
-              <a class="home_show-all" href="/viewAllMovie">
-                view all
-              </a>
+              <div class="home_show-all">view all</div>
             </Link>
           </div>
+
           <div class="home_upcoming-month d-flex container">
-            <a
-              class="d-flex btn-upcoming-month-active btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              September
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              October
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              November
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              December
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              January
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              February
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              March
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              April
-            </a>
-            <a
-              class="d-flex btn-upcoming-month btn btn-outline-primary"
-              aria-current="page"
-              href="../"
-            >
-              May
-            </a>
+            <div className="month-filter-cont">
+              {months.map((item) => (
+                <button
+                  className={`btn btn-outline-primary ${
+                    item.number === releaseDate ? "btn-upcoming-month-active" : "btn-upcoming-month"
+                  }`}
+                  onClick={() => setReleaseDate(item.number)}
+                  key={item.number}
+                >
+                  {item.title}
+                </button>
+              ))}
+            </div>
           </div>
-          <div class="home_showing-list container d-flex">
-            <div class="showing-card-active">
-              <img src={blackWidow} alt="" />
-              <div class="showing-card-content">
-                <h3>Black Widow</h3>
-                <p>Action, Adventure, Sci-Fi</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
+
+          <div class="showing-list container d-flex">
+            {data.map((item) => (
+              <div key={item.id}>
+                <Card data={item} handleDetail={handleDetailMovie} />
               </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={theWitches} alt="" />
-              <div class="showing-card-content">
-                <h3>The Witches</h3>
-                <p>Adventure, Comedy</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={tenet} alt="" />
-              <div class="showing-card-content">
-                <h3>Tenet</h3>
-                <p>Action, Sci-Fi</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={blackWidow} alt="" />
-              <div class="showing-card-content">
-                <h3>Black Widow</h3>
-                <p>Action, Adventure, Sci-Fi</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={theWitches} alt="" />
-              <div class="showing-card-content">
-                <h3>The Witches</h3>
-                <p>Adventure, Comedy</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div class="showing-card-active">
-              <img src={tenet} alt="" />
-              <div class="showing-card-content">
-                <h3>Tenet</h3>
-                <p>Action, Sci-Fi</p>
-                <Link to="../movieDetails">
-                  <a
-                    class="d-flex btn-showing btn btn-outline-primary"
-                    aria-current="page"
-                    href="/"
-                  >
-                    Details
-                  </a>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
         <section class="home_join-now container">
@@ -260,13 +146,11 @@ function Home() {
             <input
               type="email"
               class="form-control home_form-control form-join"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
               placeholder="Write your email"
             />
-            <a class="d-flex home_btn-join btn btn-primary" aria-current="page" href="../">
+            <Link class="d-flex home_btn-join btn btn-primary" aria-current="page" to="/">
               Join Now
-            </a>
+            </Link>
           </div>
 
           <p>

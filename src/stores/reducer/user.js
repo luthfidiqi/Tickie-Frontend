@@ -1,43 +1,46 @@
 const initialState = {
-  isError: false,
   isLoading: false,
-  data: [],
-  pageInfo: {},
-  msg: ""
+  isError: false,
+  msg: "",
+  data: {}
 };
-const movie = (state = initialState, action) => {
+
+const user = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_DATA_MOVIE_PENDING": {
-      return { ...state, isLoading: true, isError: false };
+    case "GET_USER_BY_ID_PENDING": {
+      return {
+        ...state,
+        isLoading: true,
+        isError: false,
+        msg: ""
+      };
     }
-    case "GET_DATA_MOVIE_FULFILLED": {
+    case "GET_USER_BY_ID_FULFILLED": {
+      console.log(action.payload);
       return {
         ...state,
         isLoading: false,
-        isError: false,
-        data: action.payload.data.data,
-        pageInfo: action.payload.data.pagination,
+        data: { ...action.payload.data.data[0] },
         msg: action.payload.data.msg
       };
     }
-    case "GET_DATA_MOVIE_REJECTED": {
+    case "GET_USER_BY_ID_REJECTED": {
       return {
         ...state,
         isLoading: false,
         isError: true,
-        data: [],
-        pageInfo: {},
+        data: {},
         msg: action.payload.response.data.msg
       };
     }
-    case "UPDATE_MOVIE_PENDING": {
+    case "UPDATE_USER_PENDING": {
       return {
         ...state,
         isLoading: true,
         isError: false
       };
     }
-    case "UPDATE_MOVIE_FULFILLED": {
+    case "UPDATE_USER_FULFILLED": {
       return {
         ...state,
         isLoading: false,
@@ -45,7 +48,7 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "UPDATE_MOVIE_REJECTED": {
+    case "UPDATE_USER_REJECTED": {
       return {
         ...state,
         isLoading: false,
@@ -53,14 +56,14 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "POST_MOVIE_PENDING": {
+    case "UPDATE_PASSWORD_PENDING": {
       return {
         ...state,
         isLoading: true,
         isError: false
       };
     }
-    case "POST_MOVIE_FULFILLED": {
+    case "UPDATE_PASSWORD_FULFILLED": {
       return {
         ...state,
         isLoading: false,
@@ -68,30 +71,7 @@ const movie = (state = initialState, action) => {
         msg: action.payload.data.msg
       };
     }
-    case "POST_MOVIE_REJECTED": {
-      return {
-        ...state,
-        isLoading: false,
-        isError: true,
-        msg: action.payload.data.msg
-      };
-    }
-    case "DELETE_MOVIE_PENDING": {
-      return {
-        ...state,
-        isLoading: true,
-        isError: false
-      };
-    }
-    case "DELETE_MOVIE_FULFILLED": {
-      return {
-        ...state,
-        isLoading: false,
-        isError: false,
-        msg: action.payload.data.msg
-      };
-    }
-    case "DELETE_MOVIE_REJECTED": {
+    case "UPDATE_PASSWORD_REJECTED": {
       return {
         ...state,
         isLoading: false,
@@ -105,4 +85,4 @@ const movie = (state = initialState, action) => {
   }
 };
 
-export default movie;
+export default user;

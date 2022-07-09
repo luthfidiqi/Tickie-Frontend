@@ -10,7 +10,7 @@ import graph from "../../assets/img/manage/graph.png";
 function Dashboard() {
   return (
     <>
-      <div class="dashboard">
+      <div className="dashboard">
         <NavbarSignIn></NavbarSignIn>
 
         <div className="dashboard-box d-flex container mt-5 mb-5">
@@ -21,13 +21,13 @@ function Dashboard() {
             </div>
           </div>
 
-          <div class="dashboard-right">
+          <div className="dashboard-right">
             <h1>Filtered</h1>
             <div className="dashboard-card">
               <div className="dropdown-style">
-                <div class="dropdown">
+                <div className="dropdown">
                   <a
-                    class="btn btn-secondary dropdown-toggle"
+                    className="btn btn-secondary dropdown-toggle"
                     href="#"
                     role="button"
                     id="dropdownMenuLink"
@@ -37,28 +37,28 @@ function Dashboard() {
                     Select Movie
                   </a>
 
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Something else here
                       </a>
                     </li>
                   </ul>
                 </div>
 
-                <div class="dropdown mt-3">
+                <div className="dropdown mt-3">
                   <a
-                    class="btn btn-secondary dropdown-toggle"
+                    className="btn btn-secondary dropdown-toggle"
                     href="#"
                     role="button"
                     id="dropdownMenuLink"
@@ -68,27 +68,27 @@ function Dashboard() {
                     Select Premiere
                   </a>
 
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Something else here
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="dropdown mt-3">
+                <div className="dropdown mt-3">
                   <a
-                    class="btn btn-secondary dropdown-toggle"
+                    className="btn btn-secondary dropdown-toggle"
                     href="#"
                     role="button"
                     id="dropdownMenuLink"
@@ -98,19 +98,19 @@ function Dashboard() {
                     Select Location
                   </a>
 
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Another action
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a className="dropdown-item" href="#">
                         Something else here
                       </a>
                     </li>
@@ -118,10 +118,10 @@ function Dashboard() {
                 </div>
               </div>
 
-              <button type="submit" class="filter-btn mt-5">
+              <button type="submit" className="filter-btn mt-5">
                 Filter
               </button>
-              <button type="submit" class="reset-btn mt-4">
+              <button type="submit" className="reset-btn mt-4">
                 Reset
               </button>
             </div>

@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
-
-import counter from "./counter";
 import movie from "./movie";
+import schedule from "./schedule";
+import user from "./user";
+import ticket from "./ticket";
 
 export default combineReducers({
-  counter, // counter: counter
-  movie
+  movie,
+  schedule,
+  user,
+  ticket
 });

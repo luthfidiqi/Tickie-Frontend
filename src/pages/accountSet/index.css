@@ -52,6 +52,16 @@
   background-color: #dedede;
 }
 
+.img-profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
 /* SWITCH NAVBAR */
 .switch-nav {
   background-color: white;

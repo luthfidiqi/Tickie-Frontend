@@ -82,21 +82,8 @@
   margin-top: 32px;
 }
 
-.allMovie_pagination ul .active .page-link {
-  border: none;
-  margin: 0 10px;
-  font-size: 18px !important;
-  background-color: #5f2eea;
-  padding: 8px 18px;
-  border-radius: 8px !important;
-  -webkit-border-radius: 8px !important;
-  -moz-border-radius: 8px !important;
-  -ms-border-radius: 8px !important;
-  -o-border-radius: 8px !important;
-  box-shadow: 0px 8px 16px #602eea3d;
-}
-
-.allMovie_pagination ul li a {
+.allMovie_pagination button {
+  background-color: white;
   margin: 0 10px;
   font-size: 18px !important;
   color: #4e4b66;
@@ -107,6 +94,11 @@
   -moz-border-radius: 8px !important;
   -ms-border-radius: 8px !important;
   -o-border-radius: 8px !important;
+}
+
+.pagination-active {
+  background-color: #5f2eea !important;
+  color: white !important;
 }
 
 @media (max-width: 575.98px) {

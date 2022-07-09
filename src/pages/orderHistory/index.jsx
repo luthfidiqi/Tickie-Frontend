@@ -1,6 +1,8 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "../../utils/axios";
+import { useSelector } from "react-redux";
 
 // COMPONENT
 import Footer from "../../components/footer";
@@ -12,12 +14,39 @@ import ebvLogo from "../../assets/img/history/ebv.png";
 
 function OrderHistory() {
   const navigate = useNavigate();
-  const handleTicket = () => {
-    navigate("../ticket");
+  const [dataTicket, setDataTicket] = useState([]);
+
+  const getdataTicket = async () => {
+    try {
+      console.log("GET DATA TICKET");
+      const idUser = localStorage.getItem("id");
+      const ticket = await axios.get(`booking/user/${idUser}`);
+      setDataTicket(ticket.data.data.slice(0, 3));
+      console.log(dataTicket);
+    } catch (error) {
+      console.log(error.response);
+    }
+  };
+
+  useEffect(() => {
+    getdataTicket();
+  }, []);
+
+  console.log(getdataTicket);
+
+  const user = useSelector((state) => state.user);
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/");
+  };
+
+  const handleTicket = (send) => {
+    navigate("/ticket", { state: send });
   };
   return (
     <>
-      <div class="profile">
+      <div className="profile">
         <NavbarSignIn></NavbarSignIn>
 
         <section className="switch-mobile">
@@ -31,26 +60,37 @@ function OrderHistory() {
           </div>
         </section>
 
-        <main class="profile_main d-flex container">
-          <div class="profile-left-content disable-mobile">
-            <section class="user-info">
+        <main className="profile_main d-flex container">
+          <div className="profile-left-content">
+            <section className="user-info">
               <h1>INFO</h1>
               <div className="d-flex flex-column align-items-center">
-                <img src={userPhoto} alt="" />
-                <h2>Jonas El Rodriguez</h2>
-                <h3>Moviegoers</h3>
+                <div className="img-profile">
+                  <img
+                    src={
+                      user.data.image
+                        ? `https://res.cloudinary.com/luthfidiqi/image/upload/v1649598083/${user.data.image}`
+                        : "https://www.a1hosting.net/wp-content/themes/arkahost/assets/images/default.jpg"
+                    }
+                    alt=""
+                    className="profile__profileImg"
+                  />
+                </div>
+                {/* <img src={userPhoto} alt="" /> */}
+                <h2>{`${user.data.firstName} ${user.data.lastName} `}</h2>
+                <h3>{user.data.email}</h3>
                 <div className="info-line"></div>
                 <button
-                  // onClick={handleSignIn}
+                  onClick={handleLogout}
                   type="submit"
-                  class="signIn_btn btn btn-primary mt-4"
+                  className="signIn_btn btn btn-primary mt-4"
                 >
                   Logout
                 </button>
               </div>
             </section>
           </div>
-          <div class="profile-right-content">
+          <div className="profile-right-content">
             <div className="switch-nav mb-4 disable-mobile">
               <div className="switch-nonactive">
                 <Link to="/accountSet">Account Settings</Link>
@@ -60,28 +100,30 @@ function OrderHistory() {
               </div>
             </div>
 
-            <div className="order-ticket">
-              <div className="order-top d-flex justify-content-between">
-                <div className="order-top-text">
-                  <p>Tuesday, 07 July 2020 - 04:30pm</p>
-                  <h4>Spider-Man: Homecoming</h4>
+            {dataTicket.map((item) => (
+              <div className="order-ticket" key={item}>
+                <div className="order-top d-flex justify-content-between">
+                  <div className="order-top-text">
+                    <p>Tuesday, 07 July 2020 - 04:30pm</p>
+                    <h4>Spider-Man: Homecoming</h4>
+                  </div>
+                  <img src={ebvLogo} alt="" />
                 </div>
-                <img src={ebvLogo} alt="" />
+                <hr />
+                <div className="d-flex justify-content-between">
+                  <button onClick={handleTicket} type="submit" className="btn-ticket-active mt-4">
+                    Ticket in active
+                  </button>
+                  <button
+                    onClick={handleTicket}
+                    type="submit"
+                    className="ticket-details mt-4 disable-mobile"
+                  >
+                    See Details
+                  </button>
+                </div>
               </div>
-              <hr />
-              <div className="d-flex justify-content-between">
-                <button onClick={handleTicket} type="submit" class="btn-ticket-active mt-4">
-                  Ticket in active
-                </button>
-                <button
-                  onClick={handleTicket}
-                  type="submit"
-                  class="ticket-details mt-4 disable-mobile"
-                >
-                  See Details
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
         </main>
 

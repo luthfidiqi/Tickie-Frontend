@@ -150,54 +150,54 @@ function ManageMovie() {
 
   return (
     <>
-      <div class="manageMovie">
+      <div className="manageMovie">
         <NavbarSignIn></NavbarSignIn>
 
-        <main class="manageMovie_main container">
-          <section class="allMovie_title">
+        <main className="manageMovie_main container">
+          <section className="allMovie_title">
             <h1>Form Movie</h1>
-            <form class="formMovie" onSubmit={isUpdate ? handleUpdate : handleSubmit}>
-              <div class="d-flex">
-                <div class="movieImage">
+            <form className="formMovie" onSubmit={isUpdate ? handleUpdate : handleSubmit}>
+              <div className="d-flex">
+                <div className="movieImage">
                   {image && <img src={image} alt="Image Movie Preview" />}
                 </div>
-                <div class="form-grup-1">
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                <div className="form-grup-1">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Movie Name
                     </label>
                     <input
                       type="text"
                       name="name"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Input movie name..."
                       onChange={(event) => handleChangeForm(event)}
                       value={form.name}
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Director
                     </label>
                     <input
                       type="text"
                       name="director"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Input director..."
                       onChange={(event) => handleChangeForm(event)}
                       value={form.director}
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Release date
                     </label>
                     <input
                       type="text"
                       name="releaseDate"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="DD/MM/YYYY"
                       onChange={(event) => handleChangeForm(event)}
@@ -206,29 +206,29 @@ function ManageMovie() {
                   </div>
                 </div>
 
-                <div class="form-grup-2">
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                <div className="form-grup-2">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Category
                     </label>
                     <input
                       type="text"
                       name="category"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Input category..."
                       onChange={(event) => handleChangeForm(event)}
                       value={form.category}
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Casts
                     </label>
                     <input
                       type="text"
                       name="casts"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Input casts..."
                       onChange={(event) => handleChangeForm(event)}
@@ -236,28 +236,28 @@ function ManageMovie() {
                     />
                   </div>
                   <div className="d-flex">
-                    <div class="mb-3 me-4">
-                      <label for="formMovie-1" class="form-label">
+                    <div className="mb-3 me-4">
+                      <label for="formMovie-1" className="form-label">
                         Duration
                       </label>
                       <input
                         type="text"
                         name="duration"
-                        class="form-control"
+                        className="form-control"
                         id="formMovie-1"
                         placeholder="Input duration..."
                         onChange={(event) => handleChangeForm(event)}
                         value={form.duration}
                       />
                     </div>
-                    <div class="mb-3">
-                      <label for="formMovie-1" class="form-label">
+                    <div className="mb-3">
+                      <label for="formMovie-1" className="form-label">
                         Image
                       </label>
                       <input
                         type="file"
                         name="image"
-                        class="form-control"
+                        className="form-control"
                         onChange={(event) => handleChangeForm(event)}
                       />
                     </div>
@@ -265,15 +265,15 @@ function ManageMovie() {
                 </div>
               </div>
 
-              <div class="form-grup-3">
-                <div class="mb-3">
-                  <label for="formMovie-1" class="form-label">
+              <div className="form-grup-3">
+                <div className="mb-3">
+                  <label for="formMovie-1" className="form-label">
                     Synopsis
                   </label>
                   <textarea
                     type="textarea"
                     name="synopsis"
-                    class="form-control"
+                    className="form-control"
                     id="formMovie-1"
                     placeholder="Input synopsis..."
                     onChange={(event) => handleChangeForm(event)}
@@ -281,26 +281,29 @@ function ManageMovie() {
                   />
                 </div>
               </div>
-              <div class="formMovie_content-btn d-flex">
+              <div className="formMovie_content-btn d-flex">
                 <button
                   type="submit"
-                  class="d-flex formMovie_btn btn btn-outline-primary disable-mobile"
+                  className="d-flex formMovie_btn btn btn-outline-primary disable-mobile"
                 >
                   Reset
                 </button>
-                <button type="submit" class="d-flex formMovie_btn-active btn btn-outline-primary">
+                <button
+                  type="submit"
+                  className="d-flex formMovie_btn-active btn btn-outline-primary"
+                >
                   {isUpdate ? "Update" : "Submit"}
                 </button>
               </div>
             </form>
           </section>
 
-          <section class="allMovie_title mb-5 d-flex">
+          <section className="allMovie_title mb-5 d-flex">
             <h1>Data Movie</h1>
-            <div class="d-flex">
-              <div class="dropdown">
+            <div className="d-flex">
+              <div className="dropdown">
                 <a
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   href="#"
                   role="button"
                   id="dropdownMenuLink"
@@ -310,29 +313,29 @@ function ManageMovie() {
                   Sort
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="ml-2">
+              <div className="ml-2">
                 <input
                   type="email"
                   name="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputEmail"
                   placeholder="Search Movie Name ..."
                   onChange={(event) => handleChangeForm(event)}
@@ -341,7 +344,7 @@ function ManageMovie() {
             </div>
           </section>
 
-          <section class="allMovie">
+          <section className="allMovie">
             <div className="row">
               {/* {movie.data.map((item) => (
                 <div className="col" key={item.id}>
@@ -362,15 +365,15 @@ function ManageMovie() {
             </div>
           </section>
 
-          {/* <section class="allMovie_pagination">
+          {/* <section className="allMovie_pagination">
             <nav aria-label="...">
-              <ul class="pagination pagination-md">
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">1</span>
+              <ul className="pagination pagination-md">
+                <li className="page-item active" aria-current="page">
+                  <span className="page-link">1</span>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li className="page-item"><a className="page-link" href="#">2</a></li>
+                <li className="page-item"><a className="page-link" href="#">3</a></li>
+                <li className="page-item"><a className="page-link" href="#">4</a></li>
               </ul>
             </nav>
           </section> */}

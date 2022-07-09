@@ -1,6 +1,8 @@
 import "./index.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "../../utils/axios";
+import { useSelector } from "react-redux";
 
 // Assets IMG
 import logoTickitz from "../../assets/img/home/logo-tickitz-color.svg";
@@ -8,15 +10,16 @@ import avatar from "../../assets/img/movie-details/avatar.png";
 // import search from "../../assets/img/movie-details/search.svg";
 
 function NavbarSignIn() {
+  const user = useSelector((state) => state.user);
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-          <Link class="navbar-brand" to="../home">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container">
+          <Link className="navbar-brand" to="../home">
             <img src={logoTickitz} alt="" />
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -24,36 +27,44 @@ function NavbarSignIn() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse mobile-navbar" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="../home">
+          <div className="collapse navbar-collapse mobile-navbar" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="../home">
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="../viewAllMovie">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="../viewAllMovie">
                   List Movie
                 </Link>
               </li>
-              <li class="nav-item disable-web">
-                <Link class="nav-link active" aria-current="page" to="../accountSet">
+              <li className="nav-item disable-web">
+                <Link className="nav-link active" aria-current="page" to="../accountSet">
                   Profile
                 </Link>
               </li>
-              <li class="nav-item disable-web">
-                <div class="nav-link active">
+              <li className="nav-item disable-web">
+                <div className="nav-link active">
                   <p>© 2020 Tickitz. All Rights Reserved.</p>
                 </div>
               </li>
             </ul>
 
-            <div class="d-flex disable-mobile">
+            <div className="nav-profile d-flex disable-mobile">
               {/* <img src={search} alt="" /> */}
               <Link to="../accountSet">
-                <img class="avatar" src={avatar} alt="" />
+                <img
+                  src={
+                    user.data.image
+                      ? `https://res.cloudinary.com/luthfidiqi/image/upload/v1649598083/${user.data.image}`
+                      : "https://www.a1hosting.net/wp-content/themes/arkahost/assets/images/default.jpg"
+                  }
+                  alt=""
+                  className="profile__profileImg"
+                />
               </Link>
             </div>
           </div>

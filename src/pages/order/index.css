@@ -65,13 +65,14 @@
 
 .payment-card-content h2 {
   color: #6b6b6b;
-  font-size: 14px;
+  font-size: 16px !important;
   margin-bottom: 0;
+  font-weight: 600 !important;
 }
 
 .payment-card-content p {
   color: #14142b;
-  font-size: 14px;
+  font-size: 16px !important;
   font-weight: 800;
   margin-bottom: 0;
 }

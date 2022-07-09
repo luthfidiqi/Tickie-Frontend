@@ -13,7 +13,7 @@ import qrcode from "../../assets/img/history/qrcode.png";
 function Ticket() {
   return (
     <>
-      <div class="ticket-cont">
+      <div className="ticket-cont">
         <NavbarSignIn></NavbarSignIn>
         <div className="ticket-box container d-flex flex-column mt-5 mb-5 align-items-center justify-content-center">
           <h1>Proof of Payment</h1>
@@ -72,7 +72,7 @@ function Ticket() {
           <button
             // onClick={handleSignIn}
             type="submit"
-            class="btn-download btn btn-primary mt-4"
+            className="btn-download btn btn-primary mt-4"
           >
             Download
           </button>

@@ -13,89 +13,89 @@ function ManageSchedule() {
   document.title = "Tickie";
   return (
     <>
-      <div class="manageSchedule">
+      <div className="manageSchedule">
         <NavbarSignIn></NavbarSignIn>
 
-        <main class="manageSchedule_main container">
-          <section class="allMovie_title">
+        <main className="manageSchedule_main container">
+          <section className="allMovie_title">
             <h1>Form Schedule</h1>
-            <div class="formMovie">
-              <div class="d-flex">
-                <div class="movieImage">
+            <div className="formMovie">
+              <div className="d-flex">
+                <div className="movieImage">
                   <img src={spiderman} alt="" />
                 </div>
-                <div class="form-grup-1">
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                <div className="form-grup-1">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Movie Name
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Spider-Man: Homecoming"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Director
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Jon Watts"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Release date
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="07/05/2020"
                     />
                   </div>
                 </div>
 
-                <div class="form-grup-2">
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                <div className="form-grup-2">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Movie Name
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Spider-Man: Homecoming"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Director
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="Jon Watts"
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="formMovie-1" class="form-label">
+                  <div className="mb-3">
+                    <label for="formMovie-1" className="form-label">
                       Release date
                     </label>
                     <input
                       type="text"
                       name="text"
-                      class="form-control"
+                      className="form-control"
                       id="formMovie-1"
                       placeholder="07/05/2020"
                     />
@@ -103,16 +103,16 @@ function ManageSchedule() {
                 </div>
               </div>
 
-              <div class="formMovie_content-btn d-flex">
+              <div className="formMovie_content-btn d-flex">
                 <a
-                  class="d-flex formMovie_btn btn btn-outline-primary disable-mobile"
+                  className="d-flex formMovie_btn btn btn-outline-primary disable-mobile"
                   aria-current="page"
                   href="/"
                 >
                   Reset
                 </a>
                 <a
-                  class="d-flex formMovie_btn-active btn btn-outline-primary"
+                  className="d-flex formMovie_btn-active btn btn-outline-primary"
                   aria-current="page"
                   href="/"
                 >
@@ -122,12 +122,12 @@ function ManageSchedule() {
             </div>
           </section>
 
-          <section class="allMovie_title mb-4 d-flex">
+          <section className="allMovie_title mb-4 d-flex">
             <h1>Data Schedule</h1>
-            <div class="d-flex">
-              <div class="dropdown">
+            <div className="d-flex">
+              <div className="dropdown">
                 <a
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   href="#"
                   role="button"
                   id="dropdownMenuLink"
@@ -137,27 +137,27 @@ function ManageSchedule() {
                   Sort
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="dropdown">
+              <div className="dropdown">
                 <a
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   href="#"
                   role="button"
                   id="dropdownMenuLink"
@@ -167,27 +167,27 @@ function ManageSchedule() {
                   Location
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="dropdown m-0">
+              <div className="dropdown m-0">
                 <a
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   href="#"
                   role="button"
                   id="dropdownMenuLink"
@@ -197,19 +197,19 @@ function ManageSchedule() {
                   Movie
                 </a>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Another action
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a className="dropdown-item" href="#">
                       Something else here
                     </a>
                   </li>
@@ -218,47 +218,47 @@ function ManageSchedule() {
             </div>
           </section>
 
-          <section class="allMovie">
-            <div class="showtimes-list">
+          <section className="allMovie">
+            <div className="showtimes-list">
               {/* <!-- CARD GRID--> */}
               {/* <!-- ROW 1 --> */}
-              <div class="d-flex justify-content-space-between">
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+              <div className="d-flex justify-content-space-between">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={ebu} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Whatever street No.12, South Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -267,42 +267,42 @@ function ManageSchedule() {
                   </div>
                 </div>
 
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={cineone} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Downcare street No. 21, East Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -311,42 +311,42 @@ function ManageSchedule() {
                   </div>
                 </div>
 
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={hiflix} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Colonel street No. 2, East Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -357,43 +357,43 @@ function ManageSchedule() {
               </div>
 
               {/* <!-- ROW 2 --> */}
-              <div class="d-flex justify-content-space-between">
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+              <div className="d-flex justify-content-space-between">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={ebu} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Whatever street No.12, South Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -402,42 +402,42 @@ function ManageSchedule() {
                   </div>
                 </div>
 
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={cineone} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Downcare street No. 21, East Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -446,42 +446,42 @@ function ManageSchedule() {
                   </div>
                 </div>
 
-                <div class="dataSchedule-card">
-                  <div class="d-flex">
+                <div className="dataSchedule-card">
+                  <div className="d-flex">
                     <img src={hiflix} alt="" />
                     <div>
                       <h2>ebv.id</h2>
                       <p>Colonel street No. 2, East Purwokerto</p>
                     </div>
                   </div>
-                  <div class="showtimes-line"></div>
-                  <div class="time-list">
-                    <div class="d-flex">
+                  <div className="showtimes-line"></div>
+                  <div className="time-list">
+                    <div className="d-flex">
                       <button>08:30am</button>
                       <button>10:30pm</button>
                       <button>12:00pm</button>
                       <button>02:00pm</button>
                     </div>
-                    <div class="d-flex">
+                    <div className="d-flex">
                       <button>04:30pm</button>
                       <button>07:00pm</button>
                       <button>08:30pm</button>
                     </div>
                   </div>
-                  <div class="price d-flex">
+                  <div className="price d-flex">
                     <h3>Price</h3>
                     <p>$10.00/seat</p>
                   </div>
-                  <div class="dataSchedule-btn d-flex justify-content-center">
+                  <div className="dataSchedule-btn d-flex justify-content-center">
                     <a
-                      class="d-flex dataSchedule-btn-update btn btn-primary"
+                      className="d-flex dataSchedule-btn-update btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
                       Update
                     </a>
                     <a
-                      class="d-flex dataSchedule-btn-delete btn btn-primary"
+                      className="d-flex dataSchedule-btn-delete btn btn-primary"
                       aria-current="page"
                       href="../order"
                     >
@@ -493,24 +493,24 @@ function ManageSchedule() {
             </div>
           </section>
 
-          <section class="allMovie_pagination">
+          <section className="allMovie_pagination">
             <nav aria-label="...">
-              <ul class="pagination pagination-md">
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">1</span>
+              <ul className="pagination pagination-md">
+                <li className="page-item active" aria-current="page">
+                  <span className="page-link">1</span>
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">
+                <li className="page-item">
+                  <a className="page-link" href="#">
                     2
                   </a>
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">
+                <li className="page-item">
+                  <a className="page-link" href="#">
                     3
                   </a>
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">
+                <li className="page-item">
+                  <a className="page-link" href="#">
                     4
                   </a>
                 </li>

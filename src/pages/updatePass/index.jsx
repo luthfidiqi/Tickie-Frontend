@@ -31,31 +31,31 @@ function UpdatePass() {
             <h2>Fill your complete password</h2>
             <p>set your new password</p>
             <form className="signIn_form">
-              <div class="mb-3 signIn_password-input">
-                <label for="exampleInputPassword1" class="form-label">
+              <div className="mb-3 signIn_password-input">
+                <label for="exampleInputPassword1" className="form-label">
                   Password
                 </label>
                 <input
                   type="password"
                   name="password"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputPassword1"
                   placeholder="Write your password"
                 />
-                <img class="signIn_icon-pw" src={iconPassword} alt="password icon" />
+                <img className="signIn_icon-pw" src={iconPassword} alt="password icon" />
               </div>
-              <div class="mb-3 signIn_password-input">
-                <label for="exampleInputPassword1" class="form-label">
+              <div className="mb-3 signIn_password-input">
+                <label for="exampleInputPassword1" className="form-label">
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   name="password"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputPassword1"
                   placeholder="Write your confirm password"
                 />
-                <img class="signIn_icon-pw" src={iconPassword} alt="password icon" />
+                <img className="signIn_icon-pw" src={iconPassword} alt="password icon" />
               </div>
               <button
                 onClick={handleUpdate}
