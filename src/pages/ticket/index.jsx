@@ -1,6 +1,8 @@
 import React from "react";
 // import { Link, useNavigate } from "react-router-dom";
 import "./index.css";
+import { useLocation } from "react-router-dom";
+import { QRCodeSVG } from "qrcode.react";
 
 // COMPONENT
 import Footer from "../../components/footer";
@@ -11,6 +13,7 @@ import ticketLogo from "../../assets/img/history/ticket-logo.png";
 import qrcode from "../../assets/img/history/qrcode.png";
 
 function Ticket() {
+  const { state } = useLocation();
   return (
     <>
       <div className="ticket-cont">
@@ -25,36 +28,36 @@ function Ticket() {
               </div>
               <div className="down">
                 <h6>Movie</h6>
-                <p>Spider-Man: Homecoming</p>
+                <p>{state.name}</p>
                 <div className="d-flex justify-content-between">
                   <div>
                     <div className="mt-4">
                       <h6>Date</h6>
-                      <p>07 July</p>
+                      <p>{state.date}</p>
                     </div>
                     <div className="mt-4">
                       <h6>Count</h6>
-                      <p>3 pieces</p>
+                      <p>{`${state.seat.length}  pieces`}</p>
                     </div>
                   </div>
                   <div>
                     <div className="mt-4">
                       <h6>Time</h6>
-                      <p>02:00pm</p>
+                      <p>{state.time}</p>
                     </div>
                     <div className="mt-4">
                       <h6>Seats</h6>
-                      <p>C4, C5, C6</p>
+                      <p>{state.seat}</p>
                     </div>
                   </div>
                   <div>
                     <div className="mt-4">
                       <h6>Category</h6>
-                      <p>Action</p>
+                      <p>{state.category}</p>
                     </div>
                     <div className="mt-4">
                       <h6>Price</h6>
-                      <p>$30.00</p>
+                      <p>{state.total}</p>
                     </div>
                   </div>
                 </div>
@@ -65,17 +68,17 @@ function Ticket() {
                 <img src={ticketLogo} alt="" />
               </div>
               <div className="down">
-                <img src={qrcode} alt="" />
+                {/* <img src={qrcode} alt="" /> */}
+                <QRCodeSVG value={state.id} size="150" />,
               </div>
             </div>
           </div>
-          <button
-            // onClick={handleSignIn}
+          {/* <button
             type="submit"
             className="btn-download btn btn-primary mt-4"
           >
             Download
-          </button>
+          </button> */}
         </div>
         <Footer></Footer>
       </div>

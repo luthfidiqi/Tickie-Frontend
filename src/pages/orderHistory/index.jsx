@@ -101,7 +101,7 @@ function OrderHistory() {
             </div>
 
             {dataTicket.map((item) => (
-              <div className="order-ticket" key={item}>
+              <div className="order-ticket mb-4" key={item}>
                 <div className="order-top d-flex justify-content-between">
                   <div className="order-top-text">
                     <p>Tuesday, 07 July 2020 - 04:30pm</p>
@@ -111,11 +111,41 @@ function OrderHistory() {
                 </div>
                 <hr />
                 <div className="d-flex justify-content-between">
-                  <button onClick={handleTicket} type="submit" className="btn-ticket-active mt-4">
-                    Ticket in active
+                  <button
+                    type="submit"
+                    onClick={() =>
+                      handleTicket({
+                        name: item.name,
+                        category: item.category,
+                        date: item.dateBooking.split("T")[0],
+                        time: item.timeBooking.substring(0, 5),
+                        seat: item.seat,
+                        total: item.totalPayment,
+                        id: item.bookingId
+                      })
+                    }
+                    className={
+                      item.statusUsed === "active"
+                        ? "btn-ticket-active mt-4"
+                        : "btn-ticket-nonactive mt-4"
+                    }
+                    disabled={item.statusUsed === "active" ? false : true}
+                  >
+                    {item.statusUsed === "active" ? "Ticket in Active" : "Ticket is Expired"}
                   </button>
                   <button
-                    onClick={handleTicket}
+                    onClick={() =>
+                      handleTicket({
+                        name: item.name,
+                        category: item.category,
+                        date: item.dateBooking.split("T")[0],
+                        time: item.timeBooking.substring(0, 5),
+                        seat: item.seat,
+                        total: item.totalPayment,
+                        id: item.bookingId
+                      })
+                    }
+                    disabled={item.statusUsed === "active" ? false : true}
                     type="submit"
                     className="ticket-details mt-4 disable-mobile"
                   >

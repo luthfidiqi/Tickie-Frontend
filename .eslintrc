@@ -18,7 +18,7 @@
 //   },
 //   "plugins": ["react", "react-hooks", "prettier"],
 //   "rules": {
-//     "linebreak-style": ["error", "windows"],
+//     "linebreak-style": [0, "error", "windows"],
 //     "quotes": ["error", "double", { "avoidEscape": true }],
 //     "semi": ["error", "always"],
 //     "max-len": [
@@ -31,7 +31,7 @@
 //         "ignoreUrls": true
 //       }
 //     ],
-//     "no-console": "warn",
+//     "no-console": "off",
 //     "react/jsx-props-no-spreading": "off",
 //     "react/jsx-one-expression-per-line": "off",
 //     "react/prop-types": "off",
